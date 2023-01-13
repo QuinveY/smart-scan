@@ -22,23 +22,26 @@ int main(int argc, char* argv[]) {
 	PyObject* pArgs, * pValue;
 	int i;
 
-	/*if (argc < 3) {
-		fprintf(stderr, "Usage: call pythonfile funcname [args]\n");
-		return 1;
-	}*/
+	//cout << argv << endl << endl;
 
-	cout << endl << endl;
+
+	cout << "Python output:" << endl;
 
 	// Start Python
 	init_python("smartscan");
 
 	// Verify Python Embedded is used
-	PyRun_SimpleString("import sys\n");
-	PyRun_SimpleString("print(sys.executable)\n");
+	#ifdef DEBUG
+		PyRun_SimpleString("import sys\n");
+		PyRun_SimpleString("print(sys.executable)\n");
+	#endif
+
+	PyRun_SimpleString("print('Helo from Python')\n");
 	PyRun_SimpleString("print(pow(2, 5))\n");
 	PyRun_SimpleString("print(4*4)\n");
 
-
+	PyRun_SimpleString("print(PYTHONPATH)\n");
+	PyRun_SimpleString("PYTHONHOME\n");
 
 	//pName = PyUnicode_DecodeFSDefault(argv[1]);
 	///* Error checking of pName left out */
@@ -157,6 +160,7 @@ vector<string> pluginFilesList(path pluginFolder, string fileName) {
 			for (int i = 0; i < filesFound.size(); i++) {
 				cout << filesFound[i] << endl;
 			}
+			cout << endl;
 		#endif
 
 		return filesFound;
