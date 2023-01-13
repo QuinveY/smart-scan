@@ -22,65 +22,77 @@ int main(int argc, char* argv[]) {
 	PyObject* pArgs, * pValue;
 	int i;
 
-	if (argc < 3) {
+	/*if (argc < 3) {
 		fprintf(stderr, "Usage: call pythonfile funcname [args]\n");
 		return 1;
-	}
+	}*/
 
-	Py_Initialize();
-	pName = PyUnicode_DecodeFSDefault(argv[1]);
-	/* Error checking of pName left out */
+	cout << endl << endl;
 
-	pModule = PyImport_Import(pName);
-	Py_DECREF(pName);
+	// Start Python
+	init_python("smartscan");
 
-	if (pModule != NULL) {
-		pFunc = PyObject_GetAttrString(pModule, argv[2]);
-		/* pFunc is a new reference */
+	// Verify Python Embedded is used
+	PyRun_SimpleString("import sys\n");
+	PyRun_SimpleString("print(sys.executable)\n");
+	PyRun_SimpleString("print(pow(2, 5))\n");
+	PyRun_SimpleString("print(4*4)\n");
 
-		if (pFunc && PyCallable_Check(pFunc)) {
-			pArgs = PyTuple_New(argc - 3);
-			for (i = 0; i < argc - 3; ++i) {
-				pValue = PyLong_FromLong(atoi(argv[i + 3]));
-				if (!pValue) {
-					Py_DECREF(pArgs);
-					Py_DECREF(pModule);
-					fprintf(stderr, "Cannot convert argument\n");
-					return 1;
-				}
-				/* pValue reference stolen here: */
-				PyTuple_SetItem(pArgs, i, pValue);
-			}
-			pValue = PyObject_CallObject(pFunc, pArgs);
-			Py_DECREF(pArgs);
-			if (pValue != NULL) {
-				printf("Result of call: %ld\n", PyLong_AsLong(pValue));
-				Py_DECREF(pValue);
-			}
-			else {
-				Py_DECREF(pFunc);
-				Py_DECREF(pModule);
-				PyErr_Print();
-				fprintf(stderr, "Call failed\n");
-				return 1;
-			}
-		}
-		else {
-			if (PyErr_Occurred())
-				PyErr_Print();
-			fprintf(stderr, "Cannot find function \"%s\"\n", argv[2]);
-		}
-		Py_XDECREF(pFunc);
-		Py_DECREF(pModule);
-	}
-	else {
-		PyErr_Print();
-		fprintf(stderr, "Failed to load \"%s\"\n", argv[1]);
-		return 1;
-	}
-	if (Py_FinalizeEx() < 0) {
-		return 120;
-	}
+
+
+	//pName = PyUnicode_DecodeFSDefault(argv[1]);
+	///* Error checking of pName left out */
+
+	//pModule = PyImport_Import(pName);
+	//Py_DECREF(pName);
+
+	//if (pModule != NULL) {
+	//	pFunc = PyObject_GetAttrString(pModule, argv[2]);
+	//	/* pFunc is a new reference */
+
+	//	if (pFunc && PyCallable_Check(pFunc)) {
+	//		pArgs = PyTuple_New(argc - 3);
+	//		for (i = 0; i < argc - 3; ++i) {
+	//			pValue = PyLong_FromLong(atoi(argv[i + 3]));
+	//			if (!pValue) {
+	//				Py_DECREF(pArgs);
+	//				Py_DECREF(pModule);
+	//				fprintf(stderr, "Cannot convert argument\n");
+	//				return 1;
+	//			}
+	//			/* pValue reference stolen here: */
+	//			PyTuple_SetItem(pArgs, i, pValue);
+	//		}
+	//		pValue = PyObject_CallObject(pFunc, pArgs);
+	//		Py_DECREF(pArgs);
+	//		if (pValue != NULL) {
+	//			printf("Result of call: %ld\n", PyLong_AsLong(pValue));
+	//			Py_DECREF(pValue);
+	//		}
+	//		else {
+	//			Py_DECREF(pFunc);
+	//			Py_DECREF(pModule);
+	//			PyErr_Print();
+	//			fprintf(stderr, "Call failed\n");
+	//			return 1;
+	//		}
+	//	}
+	//	else {
+	//		if (PyErr_Occurred())
+	//			PyErr_Print();
+	//		fprintf(stderr, "Cannot find function \"%s\"\n", argv[2]);
+	//	}
+	//	Py_XDECREF(pFunc);
+	//	Py_DECREF(pModule);
+	//}
+	//else {
+	//	PyErr_Print();
+	//	fprintf(stderr, "Failed to load \"%s\"\n", argv[1]);
+	//	return 1;
+	//}
+	//if (Py_FinalizeEx() < 0) {
+	//	return 120;
+	//}
 
 	/*auto result = _PyUnicode_AsString(pValue);
 	std::cout << result << std::endl;*/
@@ -232,4 +244,49 @@ bool txtFileCheck(path fileFolder, string fileName) {
 		cout << filePath << endl;
 	#endif
 	return false;
+}
+
+/// <summary>
+/// Sets up embedded Python module
+/// </summary>
+/// <param name="program_name">Name of the program</param>
+/// <returns></returns>
+PyStatus init_python(const char* program_name) {
+	PyStatus status;
+
+	PyConfig config;
+	PyConfig_InitPythonConfig(&config);
+
+	/* Set the program name before reading the configuration
+	   (decode byte string from the locale encoding).
+
+	   Implicitly preinitialize Python. */
+	status = PyConfig_SetBytesString(&config, &config.program_name, program_name);
+	if (PyStatus_Exception(status)) {
+		goto done;
+	}
+
+	/* Read all configuration at once */
+	status = PyConfig_Read(&config);
+	if (PyStatus_Exception(status)) {
+		goto done;
+	}
+
+	/* Append our custom search path to sys.path */
+	status = PyWideStringList_Append(&config.module_search_paths, L"../pythonTest/inc/python-3.10.9-embed-amd64/python310");
+	if (PyStatus_Exception(status)) {
+		goto done;
+	}
+
+	/* Override executable computed by PyConfig_Read() */
+	status = PyConfig_SetString(&config, &config.executable, L"../pythonTest/inc/python-3.10.9-embed-amd64");
+	if (PyStatus_Exception(status)) {
+		goto done;
+	}
+
+	status = Py_InitializeFromConfig(&config);
+
+done:
+	PyConfig_Clear(&config);
+	return status;
 }

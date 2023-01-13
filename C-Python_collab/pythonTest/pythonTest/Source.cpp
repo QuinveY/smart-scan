@@ -51,7 +51,7 @@ done:
 
 
 int main() {
-	std::cout << "Directory we're in: " << current_path() << endl << endl;
+	cout << "Directory we're in: " << current_path() << endl << endl;
 	
 	init_python("smartscan");
 
@@ -61,5 +61,8 @@ int main() {
     	
 	Py_Finalize();
 
+
+    cout << endl << endl; 
     system("pause");
+    return 0;
 }

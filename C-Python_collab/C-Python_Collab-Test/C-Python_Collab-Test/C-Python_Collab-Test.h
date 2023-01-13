@@ -28,3 +28,10 @@ bool folderCheck(path folderPath);
 
 
 bool txtFileCheck(path fileFolder, string fileName);
+
+/// <summary>
+/// Sets up embedded Python module
+/// </summary>
+/// <param name="program_name">Name of the program</param>
+/// <returns></returns>
+PyStatus init_python(const char* program_name);
