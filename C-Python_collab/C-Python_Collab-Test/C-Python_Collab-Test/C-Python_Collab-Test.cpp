@@ -18,12 +18,12 @@ int main(int argc, char* argv[]) {
 	// Check for files in the pluginfolders
 	vector<string> fileList = pluginFilesList(pluginFolder, "files"); 
 	
+	//cout << argv << endl << endl;
+
+
 	PyObject* pName, * pModule, * pFunc;
 	PyObject* pArgs, * pValue;
 	int i;
-
-	//cout << argv << endl << endl;
-
 
 	cout << "Python output:" << endl;
 
@@ -33,15 +33,14 @@ int main(int argc, char* argv[]) {
 	// Verify Python Embedded is used
 	#ifdef DEBUG
 		PyRun_SimpleString("import sys\n");
+		PyRun_SimpleString("print(sys.path)\n");
 		PyRun_SimpleString("print(sys.executable)\n");
 	#endif
 
 	PyRun_SimpleString("print('Helo from Python')\n");
-	PyRun_SimpleString("print(pow(2, 5))\n");
+	PyRun_SimpleString("print(pow(4, 2))\n");
 	PyRun_SimpleString("print(4*4)\n");
 
-	PyRun_SimpleString("print(PYTHONPATH)\n");
-	PyRun_SimpleString("PYTHONHOME\n");
 
 	//pName = PyUnicode_DecodeFSDefault(argv[1]);
 	///* Error checking of pName left out */
@@ -263,7 +262,6 @@ PyStatus init_python(const char* program_name) {
 
 	/* Set the program name before reading the configuration
 	   (decode byte string from the locale encoding).
-
 	   Implicitly preinitialize Python. */
 	status = PyConfig_SetBytesString(&config, &config.program_name, program_name);
 	if (PyStatus_Exception(status)) {
@@ -276,7 +274,13 @@ PyStatus init_python(const char* program_name) {
 		goto done;
 	}
 
-	/* Append our custom search path to sys.path */
+	/* Append our standard packages search path to sys.path */
+	status = PyWideStringList_Append(&config.module_search_paths, L"../pythonTest/inc/python-3.10.9-embed-amd64/python310");
+	if (PyStatus_Exception(status)) {
+		goto done;
+	}
+
+	/* Append our custom packages search path to sys.path */
 	status = PyWideStringList_Append(&config.module_search_paths, L"../pythonTest/inc/python-3.10.9-embed-amd64/python310");
 	if (PyStatus_Exception(status)) {
 		goto done;
