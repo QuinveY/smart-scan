@@ -6,8 +6,12 @@
 
 class CPyInstance {
 public:
-	CPyInstance() { Py_Initialize(); }
-	~CPyInstance() { Py_Finalize(); }
+	CPyInstance() { 
+		Py_Initialize(); 
+	}
+	~CPyInstance() { 
+		Py_Finalize(); 
+	}
 };
 
 class CPyObject {
