@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\src\format.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\src\os.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\args.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\chrono.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\compile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\format.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\format-inl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\locale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\os.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\ostream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\printf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\ranges.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include\fmt\xchar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\README.rst" />
+    <None Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\ChangeLog.rst" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{DB8EA4D3-9CC6-3FDE-89D7-B06244D42BFD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D0BABA8C-1B17-3CD9-9185-86D1EC4FA88D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

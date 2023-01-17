@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{822E6289-D64C-3CCC-850F-7ED1885A9272}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>simpleble-c</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">simpleble-c.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">simpleble-c</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">simpleble-c.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">simpleble-c</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">simpleble-c.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">simpleble-c</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">simpleble-c.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">simpleble-c</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\builders;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\external;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\backends\common;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\frontends\safe;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_install/simpleble/export"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\builders;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\external;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\backends\common;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\frontends\safe;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\builders;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\external;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\backends\common;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\frontends\safe;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\builders;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\external;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\backends\common;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\frontends\safe;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_install/simpleble/export"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\builders;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\external;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\backends\common;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\frontends\safe;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\builders;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\external;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\backends\common;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\frontends\safe;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\builders;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\external;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\backends\common;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\frontends\safe;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_install/simpleble/export"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\builders;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\external;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\backends\common;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\frontends\safe;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\builders;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\external;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\backends\common;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\frontends\safe;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\builders;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\external;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\backends\common;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\frontends\safe;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_install/simpleble/export"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\builders;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\external;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\backends\common;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\frontends\safe;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\builders;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\external;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\backends\common;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src\frontends\safe;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/simpleble_install/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted -BD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin --check-stamp-file D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_install/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\VERSION;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\epilogue.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\find\Findfmt.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\parse_version.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\prelude.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/simpleble_install/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted -BD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin --check-stamp-file D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_install/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\VERSION;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\epilogue.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\find\Findfmt.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\parse_version.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\prelude.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/simpleble_install/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted -BD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin --check-stamp-file D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_install/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\VERSION;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\epilogue.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\find\Findfmt.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\parse_version.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\prelude.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/simpleble_install/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted -BD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin --check-stamp-file D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_install/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\VERSION;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\epilogue.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\find\Findfmt.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\parse_version.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\prelude.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src_c\simpleble.cpp" />
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src_c\adapter.cpp" />
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src_c\peripheral.cpp" />
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\src_c\logging.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\ZERO_CHECK.vcxproj">
+      <Project>{2A2A57C7-6F3B-3B15-9527-9018549701BA}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\simpleble.vcxproj">
+      <Project>{C12F420E-6D2E-3AE1-AB26-2BA7EEB40D90}</Project>
+      <Name>simpleble</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

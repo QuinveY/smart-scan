@@ -1,0 +1,8 @@
+add_library(AT ATC3DG.cpp)
+add_library(CSV CSVExport.cpp)
+add_library(data DataAcquisition.cpp)
+add_library(exceptions Exceptions.cpp)
+add_library(point3 Point3.cpp)
+add_library(service SmartScanService.cpp)
+add_library(controller TrakStarController.cpp)
+add_library(trigger Trigger.cpp)

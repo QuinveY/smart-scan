@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/fmt-populate"
+		},
+		{
+			"file" : "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/41288f515cc0773a047920a250bd143a/fmt-populate.rule"
+		},
+		{
+			"file" : "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/740f224aa4c9de87c85b18d31077f3e9/fmt-populate-complete.rule"
+		},
+		{
+			"file" : "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/c27a6a8b6b450422d2b43186f1dbdc64/fmt-populate-build.rule"
+		},
+		{
+			"file" : "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/c27a6a8b6b450422d2b43186f1dbdc64/fmt-populate-configure.rule"
+		},
+		{
+			"file" : "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/c27a6a8b6b450422d2b43186f1dbdc64/fmt-populate-download.rule"
+		},
+		{
+			"file" : "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/c27a6a8b6b450422d2b43186f1dbdc64/fmt-populate-install.rule"
+		},
+		{
+			"file" : "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/c27a6a8b6b450422d2b43186f1dbdc64/fmt-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/c27a6a8b6b450422d2b43186f1dbdc64/fmt-populate-patch.rule"
+		},
+		{
+			"file" : "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/c27a6a8b6b450422d2b43186f1dbdc64/fmt-populate-test.rule"
+		},
+		{
+			"file" : "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/c27a6a8b6b450422d2b43186f1dbdc64/fmt-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"fmt-populate"
+		],
+		"name" : "fmt-populate"
+	}
+}
