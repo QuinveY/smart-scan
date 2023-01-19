@@ -261,23 +261,23 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src\CSVExport.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src\DataAcquisition.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src\Point3.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src\Scan.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src\SmartScanService.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src\TrakStarController.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src\Trigger.cpp" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc\ATC3DG.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc\CSVExport.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc\DataAcquisition.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc\Exceptions.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc\Point3.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc\Scan.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc\SmartScanConfig.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc\TrakStarController.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc\SmartScanService.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc\Trigger.h" />
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\src\CSVExport.cpp" />
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\src\DataAcquisition.cpp" />
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\src\Point3.cpp" />
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\src\Scan.cpp" />
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\src\SmartScanService.cpp" />
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\src\TrakStarController.cpp" />
+    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\src\Trigger.cpp" />
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\inc\ATC3DG.h" />
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\inc\CSVExport.h" />
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\inc\DataAcquisition.h" />
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\inc\Exceptions.h" />
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\inc\Point3.h" />
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\inc\Scan.h" />
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\inc\SmartScanConfig.h" />
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\inc\TrakStarController.h" />
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\inc\SmartScanService.h" />
+    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\inc\Trigger.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\ZERO_CHECK.vcxproj">

@@ -35,7 +35,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/SmartScanService/cmake_install.cmake")
-  include("D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_examples/cmake_install.cmake")
+  include("D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble/cmake_install.cmake")
 
 endif()
 
