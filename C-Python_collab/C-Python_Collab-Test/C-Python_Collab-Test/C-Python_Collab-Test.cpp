@@ -2,10 +2,11 @@
 
 #include "C-Python_Collab-Test.h"
 
+
 // Uncomment for debug mode
 #define DEBUG
 
-int main(int argc, char* argv[]) {
+int main() {
 	
 	#ifdef DEBUG
 		cout << "Directory we're in: " << current_path() << endl << endl;
@@ -43,6 +44,71 @@ int main(int argc, char* argv[]) {
 		PyRun_SimpleString("print(numpy.pi)\n");
 
 
+		PyObject* pName, * pModule, * pFunc;
+		PyObject* pArgs, * pValue;
+		int i;
+		
+		vector<const char *> pythonArgs = { ".\\plugins\\python_cpp_collab.py", "multiply", "2", "3" };
+
+		if (pythonArgs.size() < 3) {
+			fprintf(stderr, "Usage: call pythonfile funcname [args]\n");
+			return 1;
+		}
+
+		//Py_Initialize();
+		pName = PyUnicode_DecodeFSDefault(pythonArgs.at(0));
+		/* Error checking of pName left out */
+
+		pModule = PyImport_Import(pName);
+		Py_DECREF(pName);
+
+		if (pModule != NULL) {
+			pFunc = PyObject_GetAttrString(pModule, pythonArgs.at(1));
+			/* pFunc is a new reference */
+
+			if (pFunc && PyCallable_Check(pFunc)) {
+				pArgs = PyTuple_New(pythonArgs.size() - 3);
+				for (i = 0; i < pythonArgs.size() - 3; ++i) {
+					pValue = PyLong_FromLong(atoi(pythonArgs.at(i + 3)));
+					if (!pValue) {
+						Py_DECREF(pArgs);
+						Py_DECREF(pModule);
+						fprintf(stderr, "Cannot convert argument\n");
+						return 1;
+					}
+					/* pValue reference stolen here: */
+					PyTuple_SetItem(pArgs, i, pValue);
+				}
+				pValue = PyObject_CallObject(pFunc, pArgs);
+				Py_DECREF(pArgs);
+				if (pValue != NULL) {
+					printf("Result of call: %ld\n", PyLong_AsLong(pValue));
+					Py_DECREF(pValue);
+				}
+				else {
+					Py_DECREF(pFunc);
+					Py_DECREF(pModule);
+					PyErr_Print();
+					fprintf(stderr, "Call failed\n");
+					return 1;
+				}
+			}
+			else {
+				if (PyErr_Occurred())
+					PyErr_Print();
+				fprintf(stderr, "Cannot find function \"%s\"\n", pythonArgs.at(1));
+			}
+			Py_XDECREF(pFunc);
+			Py_DECREF(pModule);
+		}
+		else {
+			PyErr_Print();
+			fprintf(stderr, "Failed to load \"%s\"\n", pythonArgs.at(0));
+			return 1;
+		}
+		if (Py_FinalizeEx() < 0) {
+			return 120;
+		}
 	}
 	catch (const std::exception& e) {
 		cout << "Error: " << e.what() << endl;
