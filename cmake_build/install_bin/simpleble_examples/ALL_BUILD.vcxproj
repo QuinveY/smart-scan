@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5BCB3D82-ED32-3316-9F69-2049B3FA672F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/simpleble_install/examples/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted -BD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin --check-stamp-file D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_examples/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\CMakeFiles\3.25.0\CMakeCCompiler.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\VERSION;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\epilogue.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\parse_version.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\prelude.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/simpleble_install/examples/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted -BD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin --check-stamp-file D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_examples/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\CMakeFiles\3.25.0\CMakeCCompiler.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\VERSION;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\epilogue.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\parse_version.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\prelude.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/simpleble_install/examples/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted -BD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin --check-stamp-file D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_examples/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\CMakeFiles\3.25.0\CMakeCCompiler.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\VERSION;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\epilogue.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\parse_version.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\prelude.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/simpleble_install/examples/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted -BD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin --check-stamp-file D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_examples/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\CMakeFiles\3.25.0\CMakeCCompiler.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\VERSION;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\epilogue.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\parse_version.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\cmake\prelude.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\ZERO_CHECK.vcxproj">
+      <Project>{2A2A57C7-6F3B-3B15-9527-9018549701BA}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\cpp\connect\example_connect.vcxproj">
+      <Project>{D3823B9C-CB60-337F-A3CD-B2FEF72D3F48}</Project>
+      <Name>example_connect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\c\connect\example_connect_c.vcxproj">
+      <Project>{89B789B9-62CC-34C0-8BBC-9CFB2097E8DE}</Project>
+      <Name>example_connect_c</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\cpp\connect_safe\example_connect_safe.vcxproj">
+      <Project>{7D379BC7-5EC2-37D7-AB85-088F3BEEEC8E}</Project>
+      <Name>example_connect_safe</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\cpp\list_adapters\example_list_adapters.vcxproj">
+      <Project>{CE1ED9B6-513F-3174-84A7-34CBA78B820D}</Project>
+      <Name>example_list_adapters</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\cpp\notify\example_notify.vcxproj">
+      <Project>{B031174A-7171-3FE5-A874-6958BE5C386C}</Project>
+      <Name>example_notify</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\c\notify\example_notify_c.vcxproj">
+      <Project>{ACDFA2F6-FF9D-3026-969A-7DA721D7CFF8}</Project>
+      <Name>example_notify_c</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\cpp\notify_multi\example_notify_multi.vcxproj">
+      <Project>{C3B864A1-1978-350F-909C-AD83BB5099EF}</Project>
+      <Name>example_notify_multi</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\cpp\read\example_read.vcxproj">
+      <Project>{39C439F4-4F1C-3857-B706-EC76C6B2C749}</Project>
+      <Name>example_read</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\cpp\scan\example_scan.vcxproj">
+      <Project>{4A3A50FE-F210-3E6E-8779-D7C7C2CE51DC}</Project>
+      <Name>example_scan</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\c\scan\example_scan_c.vcxproj">
+      <Project>{FDFF72BE-8FB2-3522-83C3-245085A85D96}</Project>
+      <Name>example_scan_c</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_examples\cpp\write\example_write.vcxproj">
+      <Project>{1D1AFF12-9AB6-33A5-8136-2BDF70007E7C}</Project>
+      <Name>example_write</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-build\fmt.vcxproj">
+      <Project>{EFC52533-2DF7-3895-87F6-2C18BCAAF696}</Project>
+      <Name>fmt</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble\simpleble.vcxproj">
+      <Project>{C12F420E-6D2E-3AE1-AB26-2BA7EEB40D90}</Project>
+      <Name>simpleble</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble\simpleble-c.vcxproj">
+      <Project>{822E6289-D64C-3CCC-850F-7ED1885A9272}</Project>
+      <Name>simpleble-c</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

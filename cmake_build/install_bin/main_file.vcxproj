@@ -86,8 +86,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_install/simpleble/export"</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble/export"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -106,10 +106,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -117,7 +117,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>simpleble_install\simpleble\Debug\simpleble.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>simpleble\Debug\simpleble.lib;SmartScanService\Debug\SmartScanService.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -132,8 +132,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_install/simpleble/export"</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble/export"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
@@ -152,10 +152,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -163,7 +163,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>simpleble_install\simpleble\Release\simpleble.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>simpleble\Release\simpleble.lib;SmartScanService\Release\SmartScanService.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -178,8 +178,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_install/simpleble/export"</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble/export"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
@@ -198,10 +198,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -209,7 +209,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>simpleble_install\simpleble\MinSizeRel\simpleble.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>simpleble\MinSizeRel\simpleble.lib;SmartScanService\MinSizeRel\SmartScanService.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -224,8 +224,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble_install/simpleble/export"</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble/export"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -243,10 +243,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_inc;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanService\smartscan_src;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\examples\simpleble;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\simpleble_install\simpleble\include;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -254,7 +254,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>simpleble_install\simpleble\RelWithDebInfo\simpleble.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>simpleble\RelWithDebInfo\simpleble.lib;SmartScanService\RelWithDebInfo\SmartScanService.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -326,23 +326,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\SmartScanCLI.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src\CSVExport.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src\DataAcquisition.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src\Point3.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src\Scan.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src\SmartScanService.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src\TrakStarController.cpp" />
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_src\Trigger.cpp" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc\ATC3DG.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc\CSVExport.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc\DataAcquisition.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc\Exceptions.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc\Point3.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc\Scan.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc\SmartScanConfig.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc\TrakStarController.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc\SmartScanService.h" />
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\smartscan_inc\Trigger.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\ZERO_CHECK.vcxproj">
@@ -351,7 +334,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble_install\simpleble\simpleble.vcxproj">
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\SmartScanService\SmartScanService.vcxproj">
+      <Project>{10268236-0BF3-3507-8BA9-8EC4BBCFB071}</Project>
+      <Name>SmartScanService</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\simpleble\simpleble.vcxproj">
       <Project>{C12F420E-6D2E-3AE1-AB26-2BA7EEB40D90}</Project>
       <Name>simpleble</Name>
     </ProjectReference>
