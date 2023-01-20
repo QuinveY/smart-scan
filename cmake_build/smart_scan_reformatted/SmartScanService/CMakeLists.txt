@@ -1,5 +1,3 @@
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-
 set(H_files D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/SmartScanService/inc)
 set(S_files D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/SmartScanService/src)
 
@@ -11,7 +9,6 @@ set(SOURCES ${S_files}/CSVExport.cpp
             ${S_files}/SmartScanService.cpp
             ${S_files}/TrakStarController.cpp
             ${S_files}/Trigger.cpp 
-
             ${H_files}/ATC3DG.h
             ${H_files}/CSVExport.h
             ${H_files}/DataAcquisition.h
@@ -24,7 +21,5 @@ set(SOURCES ${S_files}/CSVExport.cpp
             ${H_files}/Trigger.h)
 			
 
-add_library(SmartScanService STATIC ${SOURCES})
-target_include_directories(main_file PRIVATE ${H_files})
-target_include_directories(main_file PRIVATE ${S_files})
+add_library(SmartScanService  ${SOURCES})
 target_sources(SmartScanService PRIVATE ${SOURCES})

@@ -13,7 +13,6 @@
 //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
 
 #include "SmartScanConfig.h"
-
 #include <simpleble/SimpleBLE.h>
 #include <simpleble/Utils.h>
 #include <chrono>

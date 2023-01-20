@@ -20,11 +20,6 @@ DataAcqConfig::DataAcqConfig(short int transmitterID, double measurementRate, do
 	}
 }
 
-DataAcq::DataAcq() :  mTSCtrl()
-{
-
-}
-
 DataAcq::~DataAcq()
 {
     // Delete all raw data when this object is removed.

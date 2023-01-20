@@ -1,0 +1,21 @@
+# ninja log v5
+3	223	6959301586268725	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-mkdir	b22aaffd7f630104
+3	223	6959301586268725	D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-mkdir	b22aaffd7f630104
+260	16019	6959301744185784	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-download	86be1fe49758d2a9
+260	16019	6959301744185784	D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-download	86be1fe49758d2a9
+16020	16546	0	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update	9b9b7b231a645365
+16020	16546	0	D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update	9b9b7b231a645365
+16547	16741	6959301751440030	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-patch	be25231fda192951
+16547	16741	6959301751440030	D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-patch	be25231fda192951
+16742	16955	6959301753481518	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-configure	ee2832e0fe10ab64
+16742	16955	6959301753481518	D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-configure	ee2832e0fe10ab64
+16957	17158	6959301755612634	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-build	b502ebbff4b95eee
+16957	17158	6959301755612634	D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-build	b502ebbff4b95eee
+17219	17532	6959301759366393	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-install	4f81d3f795fcf010
+17219	17532	6959301759366393	D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-install	4f81d3f795fcf010
+17533	17758	6959301761639881	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-test	6f47cf99c8d04128
+17533	17758	6959301761639881	D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-test	6f47cf99c8d04128
+17759	18029	6959301764332661	CMakeFiles/fmt-populate-complete	2950c6ac52d0153c
+17759	18029	6959301764332661	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-done	2950c6ac52d0153c
+17759	18029	6959301764332661	D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps/fmt-subbuild/CMakeFiles/fmt-populate-complete	2950c6ac52d0153c
+17759	18029	6959301764332661	D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-done	2950c6ac52d0153c

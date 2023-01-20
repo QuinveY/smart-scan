@@ -1,0 +1,15 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=git
+command=C:/Program Files/CMake/bin/cmake.exe;-P;D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-gitclone.cmake
+source_dir=D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps/fmt-src
+work_dir=D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/build/x64-Debug/_deps
+repository=https://github.com/fmtlib/fmt.git
+remote=origin
+init_submodules=TRUE
+recurse_submodules=--recursive
+submodules=
+CMP0097=NEW
+

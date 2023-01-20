@@ -4,6 +4,10 @@
 #include <exception>
 #include <string>
 
+#include <optional>
+#include "simpleble/SimpleBLE.h"
+#include <simpleble/Adapter.h>
+
 #include <simpleble/Exceptions.h>
 #include <simpleble/Types.h>
 
@@ -44,11 +48,7 @@ static auto async_get(async_t const& async) {
 
 }  // namespace SimpleBLE
 namespace Utils {
-/**
- * @brief Function to retrieve the adapter easily
- *
- * @return the adapter or an empty optional
- */
+
 std::optional<SimpleBLE::Adapter> getAdapter();
 
 /**

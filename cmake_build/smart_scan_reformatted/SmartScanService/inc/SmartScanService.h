@@ -13,6 +13,7 @@
 #include "Scan.h"
 #include "DataAcquisition.h"
 #include "CSVExport.h"
+#include "ATC3DG.h"
 
 namespace SmartScan
 {

@@ -4,6 +4,8 @@
 #include "../inc/Exceptions.h"
 #include "../inc/SmartScanService.h"
 #include "../inc/DataAcquisition.h"
+#include "../inc/ATC3DG.h"
+
 
 using namespace SmartScan;
 

@@ -1,10 +1,8 @@
 cmake_minimum_required(VERSION 3.4)
 project(smart-scan LANGUAGES CXX)
-
+include(GenerateExportHeader)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTOUIC ON)
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
 
@@ -25,7 +23,8 @@ target_include_directories(main_file PRIVATE ${simpleble_examples})
 
 add_subdirectory(SmartScanService ${BIN}/SmartScanService)
 add_subdirectory(${simpleble} ${BIN}/simpleble)
- 
+
+
 target_link_libraries(main_file simpleble::simpleble)           
 target_link_libraries(main_file SmartScanService) 
 

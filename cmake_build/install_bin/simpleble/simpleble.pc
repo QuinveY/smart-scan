@@ -1,7 +1,7 @@
-prefix=C:/Program Files (x86)/smart-scan
-exec_prefix=C:/Program Files (x86)/smart-scan
-libdir=C:/Program Files (x86)/smart-scan/lib
-includedir=C:/Program Files (x86)/smart-scan/include
+prefix=D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/install/x64-Debug
+exec_prefix=D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/install/x64-Debug
+libdir=D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/install/x64-Debug/lib
+includedir=D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/out/install/x64-Debug/include
 
 Name: SimpleBLE
 Description: "The ultimate fully-fledged cross-platform library for Bluetooth Low Energy (BLE)."

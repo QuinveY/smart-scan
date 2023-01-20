@@ -4,12 +4,13 @@
 
 #include "../inc/Exceptions.h"
 #include "../inc/TrakStarController.h"
+#include "../inc/ATC3DG.h"
 
 using namespace SmartScan;
 
-TrakStarController::TrakStarController(bool useMockData) : mUseMockData { useMockData }
+TrakStarController::TrakStarController(bool useMockData) : mUseMockData{ useMockData }
 {
-	
+
 }
 
 TrakStarController::~TrakStarController()
