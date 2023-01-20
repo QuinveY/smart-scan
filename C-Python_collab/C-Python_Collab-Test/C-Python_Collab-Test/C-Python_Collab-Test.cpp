@@ -7,7 +7,6 @@
 #define DEBUG
 
 int main() {
-	
 	#ifdef DEBUG
 		cout << "Directory we're in: " << current_path() << endl << endl;
 	#endif
@@ -48,7 +47,10 @@ int main() {
 		PyObject* pArgs, * pValue;
 		int i;
 		
-		vector<const char *> pythonArgs = { ".\\plugins\\python_cpp_collab.py", "multiply", "2", "3" };
+		PyObject* sysPath = PySys_GetObject((char*)"path");
+		PyList_Append(sysPath, (PyUnicode_FromString(pluginFolder.string().c_str())));
+
+		vector<const char *> pythonArgs = { "python_cpp_collab", "multiply", "2", "3" };
 
 		if (pythonArgs.size() < 3) {
 			fprintf(stderr, "Usage: call pythonfile funcname [args]\n");
@@ -67,9 +69,11 @@ int main() {
 			/* pFunc is a new reference */
 
 			if (pFunc && PyCallable_Check(pFunc)) {
-				pArgs = PyTuple_New(pythonArgs.size() - 3);
-				for (i = 0; i < pythonArgs.size() - 3; ++i) {
-					pValue = PyLong_FromLong(atoi(pythonArgs.at(i + 3)));
+				pArgs = PyTuple_New(pythonArgs.size() - 2);
+				for (i = 0; i < pythonArgs.size() - 2; ++i) {
+					pValue = PyLong_FromLong(atoi(pythonArgs.at(i + 2)));
+					cout << pValue << endl;
+					
 					if (!pValue) {
 						Py_DECREF(pArgs);
 						Py_DECREF(pModule);
