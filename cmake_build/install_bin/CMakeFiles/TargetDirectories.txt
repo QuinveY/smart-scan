@@ -2,6 +2,7 @@ D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/CMakeFiles
 D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/CMakeFiles/INSTALL.dir
 D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/CMakeFiles/ALL_BUILD.dir
 D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/CMakeFiles/ZERO_CHECK.dir
+D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/atlibrary/CMakeFiles/INSTALL.dir
 D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/SmartScanService/CMakeFiles/SmartScanService.dir
 D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/SmartScanService/CMakeFiles/INSTALL.dir
 D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/simpleble/CMakeFiles/simpleble.dir

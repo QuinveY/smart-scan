@@ -1,4 +1,4 @@
-# Install script for directory: D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/lib_SmartScanService
+# Install script for directory: D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/lib_ATC3DG64
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
