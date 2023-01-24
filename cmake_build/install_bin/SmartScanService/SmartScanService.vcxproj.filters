@@ -1,69 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\src\CSVExport.cpp">
+    <ClCompile Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\src\CSVExport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\src\DataAcquisition.cpp">
+    <ClCompile Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\src\DataAcquisition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\src\Point3.cpp">
+    <ClCompile Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\src\Point3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\src\Scan.cpp">
+    <ClCompile Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\src\Scan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\src\SmartScanService.cpp">
+    <ClCompile Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\src\SmartScanService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\src\TrakStarController.cpp">
+    <ClCompile Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\src\TrakStarController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\src\Trigger.cpp">
+    <ClCompile Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\src\Trigger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\inc\ATC3DG.h">
+    <ClInclude Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\inc\ATC3DG.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\inc\CSVExport.h">
+    <ClInclude Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\inc\CSVExport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\inc\DataAcquisition.h">
+    <ClInclude Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\inc\DataAcquisition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\inc\Exceptions.h">
+    <ClInclude Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\inc\Exceptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\inc\Point3.h">
+    <ClInclude Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\inc\Point3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\inc\Scan.h">
+    <ClInclude Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\inc\Scan.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\inc\SmartScanConfig.h">
+    <ClInclude Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\inc\TrakStarController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\inc\TrakStarController.h">
+    <ClInclude Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\inc\SmartScanService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\inc\SmartScanService.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\inc\Trigger.h">
+    <ClInclude Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\inc\Trigger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_SmartScanService\CMakeLists.txt" />
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\SmartScanService\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{DB8EA4D3-9CC6-3FDE-89D7-B06244D42BFD}</UniqueIdentifier>
+      <UniqueIdentifier>{BC9C3374-BA3E-3FB4-B8CB-0B5319A218D2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{D0BABA8C-1B17-3CD9-9185-86D1EC4FA88D}</UniqueIdentifier>
+      <UniqueIdentifier>{9EA0D615-BE3F-3045-AFFA-AD926C69CE76}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

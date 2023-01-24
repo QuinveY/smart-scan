@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_simpleble_install\simpleble\src_c\simpleble.cpp">
+    <ClCompile Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\simpleble_install\simpleble\src_c\simpleble.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_simpleble_install\simpleble\src_c\adapter.cpp">
+    <ClCompile Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\simpleble_install\simpleble\src_c\adapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_simpleble_install\simpleble\src_c\peripheral.cpp">
+    <ClCompile Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\simpleble_install\simpleble\src_c\peripheral.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_simpleble_install\simpleble\src_c\logging.cpp">
+    <ClCompile Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\simpleble_install\simpleble\src_c\logging.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\smart_scan_reformatted\lib_simpleble_install\simpleble\CMakeLists.txt" />
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\smart_scan_reformatted_V2\simpleble_install\simpleble\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{D0BABA8C-1B17-3CD9-9185-86D1EC4FA88D}</UniqueIdentifier>
+      <UniqueIdentifier>{9EA0D615-BE3F-3045-AFFA-AD926C69CE76}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

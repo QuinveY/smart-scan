@@ -1,8 +1,6 @@
 # CMake generation dependency list for this directory.
-C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeDetermineSystem.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeGenericSystem.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake
-C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeSystem.cmake.in
 C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/ExternalProject.cmake
@@ -13,6 +11,6 @@ C:/Program Files/CMake/share/cmake-3.25/Modules/ExternalProject/gitupdate.cmake.
 C:/Program Files/CMake/share/cmake-3.25/Modules/ExternalProject/mkdirs.cmake.in
 C:/Program Files/CMake/share/cmake-3.25/Modules/Platform/Windows.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/Platform/WindowsPaths.cmake
-D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/3.25.0/CMakeSystem.cmake
-D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeLists.txt
-D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-mkdirs.cmake
+D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/3.25.2/CMakeSystem.cmake
+D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeLists.txt
+D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-mkdirs.cmake

@@ -1,4 +1,4 @@
-# Install script for directory: D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-src
+# Install script for directory: D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

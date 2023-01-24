@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
@@ -10,9 +10,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{08E89AF8-8DB8-3C1D-9479-E19B748363D7}</ProjectGuid>
+    <ProjectGuid>{4818B068-9949-399D-A160-47BA00730695}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>fmt-populate</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -21,7 +21,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -45,12 +45,12 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\c27a6a8b6b450422d2b43186f1dbdc64\fmt-populate-mkdir.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\f873bc76541796626250248e02fb7809\fmt-populate-mkdir.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'fmt-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-mkdirs.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-mkdirs.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -59,21 +59,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\c27a6a8b6b450422d2b43186f1dbdc64\fmt-populate-download.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\f873bc76541796626250248e02fb7809\fmt-populate-download.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (git clone) for 'fmt-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps
+cd D:\Github\smart-scan\cmake_build\install_bin\_deps
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-gitclone.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-gitclone.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -81,20 +81,20 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\fmt-populate-gitinfo.txt;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\fmt-populate-gitinfo.txt;D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\c27a6a8b6b450422d2b43186f1dbdc64\fmt-populate-update.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\f873bc76541796626250248e02fb7809\fmt-populate-update.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing update step for 'fmt-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-src
+cd D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-src
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-gitupdate.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/tmp/fmt-populate-gitupdate.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -102,19 +102,19 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\c27a6a8b6b450422d2b43186f1dbdc64\fmt-populate-patch.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\f873bc76541796626250248e02fb7809\fmt-populate-patch.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'fmt-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -122,23 +122,23 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\c27a6a8b6b450422d2b43186f1dbdc64\fmt-populate-configure.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\f873bc76541796626250248e02fb7809\fmt-populate-configure.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'fmt-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-build
+cd D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-build
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -146,22 +146,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\tmp\fmt-populate-cfgcmd.txt;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\tmp\fmt-populate-cfgcmd.txt;D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\c27a6a8b6b450422d2b43186f1dbdc64\fmt-populate-build.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\f873bc76541796626250248e02fb7809\fmt-populate-build.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'fmt-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-build
+cd D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-build
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -169,22 +169,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\c27a6a8b6b450422d2b43186f1dbdc64\fmt-populate-install.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\f873bc76541796626250248e02fb7809\fmt-populate-install.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'fmt-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-build
+cd D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-build
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -192,22 +192,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\c27a6a8b6b450422d2b43186f1dbdc64\fmt-populate-test.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\f873bc76541796626250248e02fb7809\fmt-populate-test.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No test step for 'fmt-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-build
+cd D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-build
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-test
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-test
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -215,20 +215,20 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-install;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-test</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-test</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\740f224aa4c9de87c85b18d31077f3e9\fmt-populate-complete.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\6fa0df002bad17ae18329f912e524cbe\fmt-populate-complete.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'fmt-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/Debug
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/Debug
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/Debug/fmt-populate-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/Debug/fmt-populate-complete
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/Debug/fmt-populate-done
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -236,14 +236,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-install;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-mkdir;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-download;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-update;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-patch;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-configure;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-build;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-test;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\Debug\fmt-populate-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-install;D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-mkdir;D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-download;D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-update;D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-patch;D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-configure;D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-build;D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\src\fmt-populate-stamp\Debug\fmt-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\Debug\fmt-populate-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\41288f515cc0773a047920a250bd143a\fmt-populate.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\4377a8a4ab2d0b593d5421d1684b97db\fmt-populate.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 :cmEnd
@@ -252,18 +252,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\Debug\fmt-populate-complete;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\fmt-populate</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\Debug\fmt-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\fmt-populate</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeLists.txt">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild -BD:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild --check-stamp-file D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild -BD:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild --check-stamp-file D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -271,18 +271,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\3.25.0\CMakeSystem.cmake;D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\tmp\fmt-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\3.25.2\CMakeSystem.cmake;D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\fmt-populate-prefix\tmp\fmt-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\fmt-populate">
+    <None Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\CMakeFiles\fmt-populate">
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Smart_Glove_Project\Temp_folder\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\ZERO_CHECK.vcxproj">
-      <Project>{4898629D-31EC-3EB0-9667-22C7CA8DDAAB}</Project>
+    <ProjectReference Include="D:\Github\smart-scan\cmake_build\install_bin\_deps\fmt-subbuild\ZERO_CHECK.vcxproj">
+      <Project>{FE68AB2D-6539-36F6-A32F-6532BAD4D293}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

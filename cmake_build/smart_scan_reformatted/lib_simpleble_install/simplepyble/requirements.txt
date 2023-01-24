@@ -1,7 +1,0 @@
-twine
-wheel
-ninja
-pytest
-pybind11
-setuptools
-cibuildwheel==2.9

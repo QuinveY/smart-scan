@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-src"
-  "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-build"
-  "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix"
-  "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/tmp"
-  "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp"
-  "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src"
-  "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp"
+  "D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-src"
+  "D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-build"
+  "D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix"
+  "D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/tmp"
+  "D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp"
+  "D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src"
+  "D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp"
 )
 
 set(configSubDirs Debug)
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "D:/Github/smart-scan/cmake_build/install_bin/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

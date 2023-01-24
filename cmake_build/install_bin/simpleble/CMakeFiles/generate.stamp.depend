@@ -15,10 +15,10 @@ C:/Program Files/CMake/share/cmake-3.25/Modules/Internal/CheckCompilerFlag.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/Internal/CheckFlagCommonConfig.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/Internal/CheckSourceCompiles.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/exportheader.cmake.in
-D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/lib_simpleble_install/VERSION
-D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/lib_simpleble_install/cmake/epilogue.cmake
-D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/lib_simpleble_install/cmake/find/Findfmt.cmake
-D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/lib_simpleble_install/cmake/parse_version.cmake
-D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/lib_simpleble_install/cmake/prelude.cmake
-D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/lib_simpleble_install/simpleble/CMakeLists.txt
-D:/Smart_Glove_Project/Temp_folder/smart-scan/cmake_build/smart_scan_reformatted/lib_simpleble_install/simpleble/cmake/simpleble.pc.in
+D:/Github/smart-scan/cmake_build/smart_scan_reformatted_V2/simpleble_install/VERSION
+D:/Github/smart-scan/cmake_build/smart_scan_reformatted_V2/simpleble_install/cmake/epilogue.cmake
+D:/Github/smart-scan/cmake_build/smart_scan_reformatted_V2/simpleble_install/cmake/find/Findfmt.cmake
+D:/Github/smart-scan/cmake_build/smart_scan_reformatted_V2/simpleble_install/cmake/parse_version.cmake
+D:/Github/smart-scan/cmake_build/smart_scan_reformatted_V2/simpleble_install/cmake/prelude.cmake
+D:/Github/smart-scan/cmake_build/smart_scan_reformatted_V2/simpleble_install/simpleble/CMakeLists.txt
+D:/Github/smart-scan/cmake_build/smart_scan_reformatted_V2/simpleble_install/simpleble/cmake/simpleble.pc.in
