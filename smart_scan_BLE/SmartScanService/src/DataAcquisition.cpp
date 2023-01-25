@@ -2,6 +2,9 @@
 #include <ctime>
 #include <cstdio>
 
+#include <simpleble/Utils.h>
+#include <simpleble/SimpleBLE.h>
+
 #include "../inc/DataAcquisition.h"
 #include "../inc/Exceptions.h"
 
@@ -132,6 +135,9 @@ void DataAcq::Stop(bool clearData)
 		}
 	}
 
+//peripheral.unsubscribe(uuids[selection.value()].first, uuids[selection.value()].second);
+
+//peripheral.disconnect();
 	mRunning = false;
 }
 

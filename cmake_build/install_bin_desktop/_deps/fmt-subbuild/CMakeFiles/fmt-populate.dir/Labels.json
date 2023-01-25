@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/fmt-populate"
+		},
+		{
+			"file" : "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/2518463b721f41822799172924943f5b/fmt-populate.rule"
+		},
+		{
+			"file" : "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/340415c1aa929d8a718cbac3e6fc0f1d/fmt-populate-complete.rule"
+		},
+		{
+			"file" : "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/384616bd6c8deb807044cae6f4e4a7a3/fmt-populate-build.rule"
+		},
+		{
+			"file" : "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/384616bd6c8deb807044cae6f4e4a7a3/fmt-populate-configure.rule"
+		},
+		{
+			"file" : "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/384616bd6c8deb807044cae6f4e4a7a3/fmt-populate-download.rule"
+		},
+		{
+			"file" : "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/384616bd6c8deb807044cae6f4e4a7a3/fmt-populate-install.rule"
+		},
+		{
+			"file" : "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/384616bd6c8deb807044cae6f4e4a7a3/fmt-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/384616bd6c8deb807044cae6f4e4a7a3/fmt-populate-patch.rule"
+		},
+		{
+			"file" : "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/384616bd6c8deb807044cae6f4e4a7a3/fmt-populate-test.rule"
+		},
+		{
+			"file" : "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/384616bd6c8deb807044cae6f4e4a7a3/fmt-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"fmt-populate"
+		],
+		"name" : "fmt-populate"
+	}
+}

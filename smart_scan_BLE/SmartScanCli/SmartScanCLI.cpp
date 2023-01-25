@@ -159,7 +159,7 @@ int main()
 				}
 				std::cin.ignore();
 
-				std::cout << "Enter the samplenumber after which the scan is stopped (-1 for infite duration): " << std::flush;
+				std::cout << "Enter the samplenumber after which the scan is stopped (-1 for infinite duration): " << std::flush;
 				while(!(std::cin >> config.stopAtSample)){
 					std::cin.clear();
 					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -224,6 +224,7 @@ int main()
 					<< std::endl;
 			}
 
+
 			auto selection = Utils::getUserInputInt("Please select a device to connect to", peripherals.size() - 1);
 			if (!selection.has_value()) {
 				return EXIT_FAILURE;
@@ -255,18 +256,16 @@ int main()
 			}
 
 			// Subscribe to the characteristic.
-			peripheral.notify(uuids[selection.value()].first, uuids[selection.value()].second, [&](SimpleBLE::ByteArray bytes) {
-				std::cout << "Received: ";
-			Utils::print_byte_array(bytes);
-				});
+			  SimpleBLE::ByteArray rx_data = peripheral.read(uuids[selection.value()].first, uuids[selection.value()].second);
+        std::cout << "Characteristic content is: ";
+        Utils::print_byte_array(rx_data);
+		
 
-			std::this_thread::sleep_for(5s);
+			std::this_thread::sleep_for(300s);
 
-			peripheral.unsubscribe(uuids[selection.value()].first, uuids[selection.value()].second);
 
-			peripheral.disconnect();
 
-			return EXIT_SUCCESS;
+			//return EXIT_SUCCESS;
 			
 		}
 		// Calibrate the sensor offset with respect to the glove and finger t h i c c n e s s.
