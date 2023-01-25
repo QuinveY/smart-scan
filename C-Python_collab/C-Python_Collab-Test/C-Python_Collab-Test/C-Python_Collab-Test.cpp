@@ -9,7 +9,7 @@
 int main() {
 	#ifdef DEBUG
 		cout << "Directory we're in: " << current_path() << endl << endl;
-	#endif
+	#endif // DEBUG	
 
 	// Plugin folder naming
 	path pluginFolder = "."; // start from .exe folder location
@@ -21,97 +21,38 @@ int main() {
 	//cout << argv << endl << endl;
 
 
-	cout << "Python output:" << endl;
+	
 
 	try { // always check for Python_exceptions
+		//cout << "Simple Python output:" << endl;
 		// Start Python
-		init_python("smartscan");
-		  
-		  
-		// Verify Python Embedded is used
-		#ifdef DEBUG
-			PyRun_SimpleString("import sys\n");
-			PyRun_SimpleString("print(sys.path)\n");
-			PyRun_SimpleString("print(sys.executable)\n");
-		#endif
+		//init_python("smartscan1");
 
-		PyRun_SimpleString("print('Helo from Python')\n");
-		PyRun_SimpleString("print(pow(4, 2))\n");
-		PyRun_SimpleString("print(4*4)\n");
+		//// Verify Python Embedded is used
+		//#ifdef DEBUG
+		//	PyRun_SimpleString("import sys\n");
+		//	PyRun_SimpleString("print(sys.path)\n");
+		//	PyRun_SimpleString("print(sys.executable)\n");
+		//#endif // DEBUG	
 
-		PyRun_SimpleString("import numpy\n");
-		PyRun_SimpleString("print(numpy.pi)\n");
+		//PyRun_SimpleString("print('Helo from Python')\n");
+		//PyRun_SimpleString("print(pow(4, 2))\n");
+		//PyRun_SimpleString("print(4*4)\n");
 
-
-		PyObject* pName, * pModule, * pFunc;
-		PyObject* pArgs, * pValue;
-		int i;
+		//PyRun_SimpleString("import numpy\n");
+		//PyRun_SimpleString("print(numpy.pi)\n");
+		//
+		//Py_Finalize();
 		
-		PyObject* sysPath = PySys_GetObject((char*)"path");
-		PyList_Append(sysPath, (PyUnicode_FromString(pluginFolder.string().c_str())));
+		cout << endl;
 
-		vector<const char *> pythonArgs = { "python_cpp_collab", "multiply", "2", "3" };
+		// Calling a python function
+		cout << "Python file function output:" << endl;
+		vector<string> pythonArgs = { "python_cpp_collab", "multiply", "2", "3" };
 
-		if (pythonArgs.size() < 3) {
-			fprintf(stderr, "Usage: call pythonfile funcname [args]\n");
-			return 1;
-		}
-
-		//Py_Initialize();
-		pName = PyUnicode_DecodeFSDefault(pythonArgs.at(0));
-		/* Error checking of pName left out */
-
-		pModule = PyImport_Import(pName);
-		Py_DECREF(pName);
-
-		if (pModule != NULL) {
-			pFunc = PyObject_GetAttrString(pModule, pythonArgs.at(1));
-			/* pFunc is a new reference */
-
-			if (pFunc && PyCallable_Check(pFunc)) {
-				pArgs = PyTuple_New(pythonArgs.size() - 2);
-				for (i = 0; i < pythonArgs.size() - 2; ++i) {
-					pValue = PyLong_FromLong(atoi(pythonArgs.at(i + 2)));
-					cout << pValue << endl;
-					
-					if (!pValue) {
-						Py_DECREF(pArgs);
-						Py_DECREF(pModule);
-						fprintf(stderr, "Cannot convert argument\n");
-						return 1;
-					}
-					/* pValue reference stolen here: */
-					PyTuple_SetItem(pArgs, i, pValue);
-				}
-				pValue = PyObject_CallObject(pFunc, pArgs);
-				Py_DECREF(pArgs);
-				if (pValue != NULL) {
-					printf("Result of call: %ld\n", PyLong_AsLong(pValue));
-					Py_DECREF(pValue);
-				}
-				else {
-					Py_DECREF(pFunc);
-					Py_DECREF(pModule);
-					PyErr_Print();
-					fprintf(stderr, "Call failed\n");
-					return 1;
-				}
-			}
-			else {
-				if (PyErr_Occurred())
-					PyErr_Print();
-				fprintf(stderr, "Cannot find function \"%s\"\n", pythonArgs.at(1));
-			}
-			Py_XDECREF(pFunc);
-			Py_DECREF(pModule);
-		}
-		else {
-			PyErr_Print();
-			fprintf(stderr, "Failed to load \"%s\"\n", pythonArgs.at(0));
-			return 1;
-		}
-		if (Py_FinalizeEx() < 0) {
-			return 120;
+		int executed = pyHandler(pythonArgs, pluginFolder);
+		if (executed != 0) {
+			cout << "Python had an error executing, error code: " << executed << endl;
 		}
 	}
 	catch (const std::exception& e) {
@@ -266,54 +207,4 @@ bool txtFileCheck(path fileFolder, string fileName) {
 		cout << filePath << endl;
 	#endif
 	return false;
-}
-
-/// <summary>
-/// Sets up embedded Python module
-/// </summary>
-/// <param name="program_name">Name of the program</param>
-/// <returns></returns>
-PyStatus init_python(const char* program_name) {
-	PyStatus status;
-
-	PyConfig config;
-	PyConfig_InitIsolatedConfig(&config);
-
-	/* Set the program name before reading the configuration
-	   (decode byte string from the locale encoding).
-	   Implicitly preinitialize Python. */
-	status = PyConfig_SetBytesString(&config, &config.program_name, program_name);
-	if (PyStatus_Exception(status)) {
-		goto done;
-	}
-
-	/* Read all configuration at once */
-	status = PyConfig_Read(&config);
-	if (PyStatus_Exception(status)) {
-		goto done;
-	}
-
-	/* Append our standard packages search path to sys.path */
-	status = PyWideStringList_Append(&config.module_search_paths, L"../pythonTest/inc/python-3.10.9-embed-amd64/python310");
-	if (PyStatus_Exception(status)) {
-		goto done;
-	}
-
-	/* Append our custom packages search path to sys.path */
-	status = PyWideStringList_Append(&config.module_search_paths, L"../pythonTest/inc/python-3.10.9-embed-amd64/Lib/site-packages");
-	if (PyStatus_Exception(status)) {
-		goto done;
-	}
-
-	/* Override executable computed by PyConfig_Read() */
-	status = PyConfig_SetString(&config, &config.executable, L"../pythonTest/inc/python-3.10.9-embed-amd64");
-	if (PyStatus_Exception(status)) {
-		goto done;
-	}
-
-	status = Py_InitializeFromConfig(&config);
-
-done:
-	PyConfig_Clear(&config);
-	return status;
 }

@@ -156,10 +156,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="C-Python_Collab-Test.cpp" />
+    <ClCompile Include="pyHandler.cpp" />
+    <ClCompile Include="src\pyhelper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C-Python_Collab-Test.h" />
     <ClInclude Include="inc\pyhelper.h" />
+    <ClInclude Include="pyHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,13 +1,13 @@
 #pragma once
 
-#define PY_SSIZE_T_CLEAN
-#include "pyhelper.h"
+#include "pyHandler.h"
 #include <iostream>
 #include <fstream>
 #include <filesystem>
 
+
 using namespace std;
-using namespace std::filesystem;
+using namespace filesystem;
 
 
 /// <summary>
@@ -26,12 +26,11 @@ vector<string> pluginFilesList(path pluginFolder, string fileName);
 /// false when failed</returns>
 bool folderCheck(path folderPath);
 
-
-bool txtFileCheck(path fileFolder, string fileName);
-
 /// <summary>
-/// Sets up embedded Python module
+/// Checks if a textfile exists, if not it creates it
 /// </summary>
-/// <param name="program_name">Name of the program</param>
-/// <returns></returns>
-PyStatus init_python(const char* program_name);
+/// <param name="fileFolder"></param>
+/// <param name="fileName"></param>
+/// <returns>true when succeeded
+/// false when failed</returns>
+bool txtFileCheck(path fileFolder, string fileName);

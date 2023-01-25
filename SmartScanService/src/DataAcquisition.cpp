@@ -7,26 +7,20 @@
 
 using namespace SmartScan;
 
-DataAcqConfig::DataAcqConfig() 
-{
+DataAcqConfig::DataAcqConfig() {
 
 }
 
 DataAcqConfig::DataAcqConfig(short int transmitterID, double measurementRate, double powerLineFrequency, double maximumRange, int refSensorSerial, double frameRotations[3])
-	: transmitterID { transmitterID }, measurementRate { measurementRate }, powerLineFrequency { powerLineFrequency }, maximumRange { maximumRange }, refSensorSerial { refSensorSerial }
-{
+	: transmitterID { transmitterID }, measurementRate { measurementRate }, powerLineFrequency { powerLineFrequency }, maximumRange { maximumRange }, refSensorSerial { refSensorSerial } {
 	for (int i = 0; i < 3; i ++) {
 		this->frameRotations[i] = frameRotations[i]; // Copy the array.
 	}
 }
 
-DataAcq::DataAcq(bool useMockData) : mUseMockData { useMockData }, mTSCtrl(useMockData)
-{
+DataAcq::DataAcq(bool useMockData) : mUseMockData { useMockData }, mTSCtrl(useMockData) {}
 
-}
-
-DataAcq::~DataAcq()
-{
+DataAcq::~DataAcq() {
     // Delete all raw data when this object is removed.
 	this->Stop(true);
 }
