@@ -9,8 +9,10 @@ set(SOURCES ${S_files}/CSVExport.cpp
             ${S_files}/SmartScanService.cpp
             ${S_files}/TrakStarController.cpp
             ${S_files}/Trigger.cpp 
+			${H_files}/DirDef.h
             ${H_files}/ATC3DG.h
             ${H_files}/CSVExport.h
+			${H_files}/ini.h
             ${H_files}/DataAcquisition.h
             ${H_files}/Exceptions.h
             ${H_files}/Point3.h

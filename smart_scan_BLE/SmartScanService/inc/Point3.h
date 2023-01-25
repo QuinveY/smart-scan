@@ -21,7 +21,7 @@ namespace SmartScan
     class Rotation3
     {
     public:
-        double x, y, z, thumb, index, middle, ring, palm1, palm2, palm3;                     // X, Y and Z rotations (Roll, Elevation and Azimuth).
+        double x, y, z;                     // X, Y and Z rotations (Roll, Elevation and Azimuth).
 
 		// Constructor. Creates a Rotation3 object that contains the euler angle rotations.
 		// Arguments:
@@ -51,11 +51,11 @@ namespace SmartScan
     class Point3
     {
     public:
-        double x, y, z, thumb, index, middle, ring, palm1, palm2, palm3, time;               // Pressure sensors, X, Y, Z and time.
+        double x, y, z, time;               // X, Y, Z and time.
         unsigned short quality;             // Indicates magnetic interference.
         unsigned short button;              // Indicates a button press.
-        bool empty = true;                  // Indicates if the point has been assigned a real value
-        bool artificial = false;
+        //bool empty = true;                  // Indicates if the point has been assigned a real value
+        //bool artificial = false;
 
         Rotation3 r;                        // Roation object.
         Spherical3 s;                       // Spherical object.

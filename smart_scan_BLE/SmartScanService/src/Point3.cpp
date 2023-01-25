@@ -4,8 +4,8 @@ using namespace SmartScan;
 
 Rotation3::Rotation3()
 {
-	// Initialize x, y and z rotations to be 0, and pressure sensors
-	this->thumb = this->index = this->middle = this->ring = this->palm1 = this->palm2 = this->palm3 = this->x = this->y = this->z = 0;
+	// Initialize x, y and z rotations to be 0.
+	this->x = this->y = this->z = 0;
 }
 
 Rotation3::Rotation3(double x, double y, double z)
@@ -30,7 +30,7 @@ Spherical3::Spherical3(double r, double theta, double phi)
 Point3::Point3()
 {
 	// Initialize x, y, z, quality and button to be 0.
-	this->thumb = this->index = this->middle = this->ring = this->palm1 = this->palm2 = this->palm3 = this->time = this->x = this->y = this->z = this->quality = this->button = 0;
+	this->time = this->x = this->y = this->z = this->quality = this->button = 0;
 }
 
 Point3::Point3(double x, double y, double z)

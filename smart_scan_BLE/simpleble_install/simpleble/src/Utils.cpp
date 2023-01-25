@@ -1,7 +1,7 @@
 #include <iomanip>
 #include <iostream>
 #include <simpleble/Utils.h>
-
+#include <string> 
 
 namespace SimpleBLE {
 
@@ -19,7 +19,8 @@ OperatingSystem get_operating_system() {
 
 void Utils::print_byte_array(const SimpleBLE::ByteArray& bytes) {
     for (auto b : bytes) {
-        std::cout << std::hex << std::setfill('0') << std::setw(2) << (uint32_t)((uint8_t)b) << " ";
+        std::cout << std::dec << (uint32_t)((uint8_t)b);
+       
     }
     std::cout << std::endl;
 }

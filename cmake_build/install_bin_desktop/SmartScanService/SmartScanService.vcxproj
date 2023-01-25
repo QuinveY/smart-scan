@@ -268,8 +268,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\src\SmartScanService.cpp" />
     <ClCompile Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\src\TrakStarController.cpp" />
     <ClCompile Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\src\Trigger.cpp" />
+    <ClInclude Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\inc\DirDef.h" />
     <ClInclude Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\inc\ATC3DG.h" />
     <ClInclude Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\inc\CSVExport.h" />
+    <ClInclude Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\inc\ini.h" />
     <ClInclude Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\inc\DataAcquisition.h" />
     <ClInclude Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\inc\Exceptions.h" />
     <ClInclude Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\inc\Point3.h" />

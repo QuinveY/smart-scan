@@ -24,10 +24,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\inc\DirDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\inc\ATC3DG.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\inc\CSVExport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\inc\ini.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\GitHub\smart-scan\smart_scan_BLE\SmartScanService\inc\DataAcquisition.h">

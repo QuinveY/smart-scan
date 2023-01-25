@@ -23,6 +23,8 @@ set(smartscan_main 	    ${CMAKE_CURRENT_SOURCE_DIR}/SmartScanCli/SmartScanCLI.cp
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY ${smartscan_build}/ATC3DG64.DLL
      DESTINATION ${EXECUTABLE_OUTPUT_PATH})
+file(COPY ${smartscan_build}/ATC3DG64.DLL
+     DESTINATION ${EXECUTABLE_OUTPUT_PATH}/bin)
 
 #Add the necessary subdirectories so that the individual libraries run their little CMake Scripts.
 add_subdirectory(${simpleble}	  ${CMAKE_CURRENT_BINARY_DIR}/simpleble)

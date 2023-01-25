@@ -5,6 +5,8 @@
 #include "../inc/Scan.h"
 #include "../inc/Exceptions.h"
 
+#define _USE_MATH_DEFINES
+
 using namespace SmartScan;
 
 Scan::Scan(const int id, ScanConfig config)
@@ -106,6 +108,10 @@ const int Scan::GetStopAtSample() const
 	return mConfig.stopAtSample;
 }
 
+void Scan::SetStopAtSample(int newStopSample) {
+	mConfig.stopAtSample = newStopSample;
+}
+
 const double Scan::GetOutlierThreshold() const
 {
 	return mConfig.outlierThreshold;
@@ -134,9 +140,8 @@ void Scan::DataFiltering()
 
 				if (point.s.r < mSortedBuff[nearestRef][nearestTheta][nearestPhi].s.r) {	// Do not store point if the radius is larger than the one already stored.
 					mSortedBuff[nearestRef][nearestTheta][nearestPhi] = point;
-					mSortedBuff[nearestRef][nearestTheta][nearestPhi].empty = false;
+					//mSortedBuff[nearestRef][nearestTheta][nearestPhi].empty = false;
 				}
-				//}
 			}
 			mLastFilteredSample++;
 		}
@@ -145,6 +150,7 @@ void Scan::DataFiltering()
 	mRunning = false;
 }
 
+/* BROKEN FILTERING, MIGHT DATA OVERFLOW, ISSUE: FILTERS ALL POINTS TO REF POINT
 void Scan::OutlierFiltering(void) {
 	double localAverage = 0;
 	uint8_t numberOfPoints = 0;
@@ -184,7 +190,7 @@ void Scan::OutlierFiltering(void) {
 				crntOffset = 1;
 				stepsTaken = 0;
 
-				/*do {
+				do {
 					if (mSortedBuff[crntRefPoint][(crntTheta - crntOffset)][crntPhi].empty == false) {
 						localAverage += mSortedBuff[crntRefPoint][(crntTheta - crntOffset)][crntPhi].s.r;
 						found = true;
@@ -237,7 +243,7 @@ void Scan::OutlierFiltering(void) {
 					stepsTaken++;
 				} while (!found && stepsTaken < maxSteps);
 
-				localAverage = localAverage / numberOfPoints;*/
+				localAverage = localAverage / numberOfPoints;
 
 				if (mSortedBuff[crntRefPoint][crntTheta][crntPhi].s.r > (localAverage + mConfig.outlierThreshold) || mSortedBuff[crntRefPoint][crntTheta][crntPhi].empty) {
 					mSortedBuff[crntRefPoint][crntTheta][crntPhi].s.r = localAverage;
@@ -246,7 +252,7 @@ void Scan::OutlierFiltering(void) {
 			}
 		}
 	}
-}
+}*/
 
 int Scan::CalcNearestRef(Point3* point) {
 	int index = 0;
@@ -266,8 +272,7 @@ int Scan::CalcNearestRef(Point3* point) {
 	return index;
 }
 
-void Scan::CalcAngle(Point3 refPoint, Point3* point)
-{
-	point->s.theta = (atan2(point->y - refPoint.y, point->x - refPoint.x) * toAngle) + 180;
-	point->s.phi = acos((point->z - refPoint.z)/point->s.r) * toAngle;
+void Scan::CalcAngle(Point3 refPoint, Point3* point) {
+	point->s.theta = (atan2(point->y - refPoint.y, point->x - refPoint.x) * TO_RAD) + 180;
+	point->s.phi = acos((point->z - refPoint.z)/point->s.r) * TO_RAD;
 }
