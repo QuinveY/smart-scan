@@ -211,3 +211,25 @@ bool txtFileCheck(path fileFolder, string fileName) {
 	#endif
 	return false;
 }
+
+string askUserWhatFilter(vector<string> filters) {
+	int ID;
+	
+	// Print all found filenames
+	//cout << "ID [" << 0 << "]: " << "Built-in filter" << endl;
+	for (int i = 0; i < filters.size(); i++) {
+		cout << "ID [" << i << "]: " << filters[i] << endl;
+	}
+	
+	// Print prompt.
+	cout << "Which filter do you want to use? Enter filter ID number: ";
+	
+	while (!(cin >> ID)) { // Make sure the user can only input numbers.
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cout << "Invalid input.  Try again: ";
+	}
+	cin.ignore();
+
+	return filters[ID];
+}
