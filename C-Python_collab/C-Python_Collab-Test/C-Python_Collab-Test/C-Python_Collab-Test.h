@@ -4,10 +4,12 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
-
+#include "Point3.h"
 
 using namespace std;
 using namespace filesystem;
+using namespace SmartScan;
+
 
 
 /// <summary>

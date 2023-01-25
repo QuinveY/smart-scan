@@ -7,10 +7,7 @@
 
 using namespace SmartScan;
 
-DataAcqConfig::DataAcqConfig() 
-{
-
-}
+DataAcqConfig::DataAcqConfig() {}
 
 DataAcqConfig::DataAcqConfig(short int transmitterID, double measurementRate, double powerLineFrequency, double maximumRange, int refSensorSerial, double frameRotations[3])
 	: transmitterID { transmitterID }, measurementRate { measurementRate }, powerLineFrequency { powerLineFrequency }, maximumRange { maximumRange }, refSensorSerial { refSensorSerial }
@@ -20,19 +17,14 @@ DataAcqConfig::DataAcqConfig(short int transmitterID, double measurementRate, do
 	}
 }
 
-DataAcq::DataAcq() :  mTSCtrl()
-{
+DataAcq::DataAcq() :  mTSCtrl() {}
 
-}
-
-DataAcq::~DataAcq()
-{
+DataAcq::~DataAcq() {
     // Delete all raw data when this object is removed.
 	this->Stop(true);
 }
 
-void DataAcq::Init()
-{
+void DataAcq::Init() {
 	mTSCtrl.Init();
 	mTSCtrl.SelectTransmitter(mConfig.transmitterID);
 	mTSCtrl.SetPowerlineFrequency(mConfig.powerLineFrequency);
@@ -53,8 +45,7 @@ void DataAcq::Init()
 	}
 }
 
-void DataAcq::Init(DataAcqConfig acquisitionConfig)
-{
+void DataAcq::Init(DataAcqConfig acquisitionConfig) {
 	// Copy config and run init.
 	this->mConfig = acquisitionConfig;
 	this->Init();

@@ -9,9 +9,7 @@
 
 using namespace SmartScan;
 
-Scan::Scan(const int id, ScanConfig config)
-	: mId { id }, mConfig { config }
-{
+Scan::Scan(const int id, ScanConfig config) : mId { id }, mConfig { config } {
 	// Resize the sorted buffer to be a 3d vector with the indices being [numRefpoints][thetaRange][phiRange]
 	mSortedBuff.resize(this->NumRefPoints());
 	for (int i = 0; i < mSortedBuff.size(); i++) {

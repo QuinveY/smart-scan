@@ -46,9 +46,12 @@ int main() {
 		
 		cout << endl;
 
+		const std::vector<std::vector<Point3>>* inBuff;
+
+
 		// Calling a python function
 		cout << "Python file function output:" << endl;
-		vector<string> pythonArgs = { "python_cpp_collab", "multiply", "2", "3" };
+		vector<string> pythonArgs = { "python_cpp_collab", "multiply", "2", "3" };		
 
 		int executed = pyHandler(pythonArgs, pluginFolder);
 		if (executed != 0) {
