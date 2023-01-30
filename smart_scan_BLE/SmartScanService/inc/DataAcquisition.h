@@ -14,23 +14,35 @@
 #include "Point3.h"
 #include "TrakStarController.h"
 #include "Trigger.h"
+#include "BLEController.h"
+
+#define Z_CASE_OFFSET	45.72               // Distance from bottom face of the transmitter to zero point.
+#define CONV_TO_RAD			3.14159265 / 180	// Store degree to rad constant for easier acces later.
 
 namespace SmartScan
 {
+	struct digitSensor
+	{
+		int port = -1;
+		int serial = -1;
+		int index = -1;
+		int pressureOffset;
+	};
+
     struct DataAcqConfig
     {
-        short int transmitterID = 0;                    // Port of the transmitter, is usually 0 with one trakStar device.
-        double measurementRate = 250;                   // Between 20.0 and 255.0.
-        double powerLineFrequency = 60.0;               // Either 50.0 or 60.0.
-        double maximumRange = 36.0;                     // Either 36.0 (914,4 mm), 72.0 and 144.0.
-		int refSensorSerial = -1;						// Serial number of the reference sensor, set as -1 when no reference sensor is used.
-		int thumbSensorSerial = -1;						// Serial number of the thumb sensor, set as -1 when no thumb sensor is used.
-		int middleSensorSerial = -1;					// Serial number of the middle sensor, set as -1 when no middle sensor is used.
-		int indexSensorSerial = -1;						// Serial number of the index sensor, set as -1 when no index sensor is used.
-		double frameRotations[3] = {0, 0, 0};			// Set the rotation of the measurement frame, azimuth, elevation and roll. (0, 0, 0) is default.
+        short int transmitterID;						// Port of the transmitter, is usually 0 with one trakStar device.
+        double measurementRate;							// Between 20.0 and 255.0.
+        double powerLineFrequency;						// Either 50.0 or 60.0.
+        double maximumRange;							// Either 36.0 (914,4 mm), 72.0 and 144.0.
+		double frameRotations[3];						// Set the rotation of the measurement frame, azimuth, elevation and roll. (0, 0, 0) is default.
+		digitSensor reference;
+		digitSensor thumb;
+		digitSensor index;
+		digitSensor middle;
 
 		DataAcqConfig();
-		DataAcqConfig(short int transmitterID, double measurementRate, double powerLineFrequency, double maximumRange, int refSensorSerial, double frameRotations[3]);
+		DataAcqConfig(short int transmitterID, double measurementRate, double powerLineFrequency, double maximumRange, double frameRotations[3]);
     };
 
 	class DataAcq 
@@ -52,11 +64,11 @@ namespace SmartScan
 
 		// Assign the connected sensor IDs 
 		// Arguments:
-		// - refer : reference sensor IDs
-		// - thumb : thumb sensor IDs
-		// - index : index finger sensor IDs
-		// - middle : middle finger sensor IDs
-		void SensorConfig(int refer, int thumb, int index, int middle);
+		// - ref : reference sensor info
+		// - tmb : thumb sensor info
+		// - ind : index finger sensor info
+		// - mid : middle finger sensor info
+		void SensorConfig(digitSensor ref, digitSensor tmb, digitSensor ind, digitSensor mid);
 
 		// Set the Z offset of a specifc sensor. This is needed to compensate for the sensor being put on top of the fingers.
 		// Arguments:
@@ -96,6 +108,23 @@ namespace SmartScan
 		// Returns all connected serial numbers
 		const std::vector<int> GetSerialNumbers(void);
 
+		// Automatically connect to BLE device
+		bool BLEConnect(std::string MacAddress);
+
+		// Return if a BLE device is connected
+		bool BLEConnected(void);
+		
+		// Return MAC address of connected device
+		std::string BLEAddress(void);
+
+		// Return all measured pressure data in vector form
+		// Time, meas1, ... , measN
+		std::vector<int> ReadPressure(void);
+
+		// Return measurment of a single digit
+		// - index : Index number for the requested pressure sensor
+		int ReadPressureSingle(int index);
+
 		// Register a new callback function to be called whenever new raw data is available.
 		// Arguments:
 		// - callback : Contains the function that is executed. The function should take a vector of points as an argument.
@@ -107,11 +136,8 @@ namespace SmartScan
 
 		TrakStarController mTSCtrl;                     					// TrackStar controller obj.
 		Trigger button_obj;													// Trigger obj.
+		PressureSensors pressureGloves;										// BLE pressure gloves
 
-		int refSensorPort = -1;												// Port number of the reference sensor.
-		int thumbSensorPort = -1;											// Port number of the thumb sensor.
-		int middleSensorPort = -1;											// Port number of the middle finger sensor.
-		int indexSensorPort = -1;											// Port number of the index sensor.
 		std::vector<int> mPortNumBuff;										// Vector containing the sensor port numbers.
 		std::vector<int> mSerialBuff;										// Vector containing sensor serial numbers.
 		std::vector<std::vector<Point3>> mRawBuff;      					// Raw data vector.
@@ -119,9 +145,6 @@ namespace SmartScan
 		std::unique_ptr<std::thread> pAcquisitionThread;					// Data acquisition thread.
 		
 		std::function<void(const std::vector<Point3>&)>mRawDataCallback;    // Callback for printing raw data in real time.
-
-		const double toRad = 3.14159265/180;								// Store degree to rad constant for easier acces later.
-        const double zCaseOffset = 45.72;                                   // Distance from bottom face of the transmitter to zero point.
 
 		// Return the port number of a sensor based on its serial number. 
 		// Arguments:

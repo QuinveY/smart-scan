@@ -1,7 +1,7 @@
 #include "../inc/BLEController.h"
+#include <iostream>
 
 using namespace SimpleBLE;
-using namespace std;
 
 PressureSensors::PressureSensors() {
 	
@@ -11,105 +11,101 @@ PressureSensors::~PressureSensors() {
 
 }
 
-int PressureSensors::Connect() {
+int PressureSensors::ConnectToGlove(std::string macAddress) {
+	bool foundMeas = false;
+	bool foundSpeed = false;
 
 	// Check if a usuable adapter is present
-	optional<Adapter> adapter_optional = Utils::getAdapter();
+	std::optional<Adapter> adapter_optional = Utils::getAdapter();
 
 	// Return error incase no adapter has been assigned
 	if (!adapter_optional.has_value()) {
-		cout << "Error: no bluetooth adapters have been found.";
+		std::cout << "Error: no bluetooth adapters have been found.";
 		return EXIT_FAILURE;
 	}
 
 	// Save the adapter
 	adapter = adapter_optional.value();
 
-	// Attach callback tp when a peripheral has been found
-	vector<Peripheral> peripherals;
+	// Attach callback to automatically connect
+	adapter.set_callback_on_scan_found([&](SimpleBLE::Peripheral peripheral) {
+		// Check if the found device has a matching MAC address
+		if (strncmp(peripheral.address().c_str(), macAddress.c_str(), peripheral.address().size()) == 0) {
+			peripheral = peripheral;
+		}
+		// Or if the name is the same as the expected name, if there isn't already a glove found
+		else if (strncmp(peripheral.identifier().c_str(), GLOVE_NAME, 22) == 0 && strncmp(peripheral.address().c_str(), macAddress.c_str(), peripheral.address().size()) != 0) {
+			peripheral = peripheral;
+		}
+		});
 
 	// Attach callbacks to the the start and stop scan functions
-	adapter.set_callback_on_scan_start([]() { cout << "Scan started." << endl; });
-	adapter.set_callback_on_scan_stop([]() { cout << "Scan stopped." << endl; });
+	//adapter.set_callback_on_scan_start([]() { std::cout << "Scan started." << std::endl; });
+	//adapter.set_callback_on_scan_stop([]() { std::cout << "Scan stopped." << std::endl; });
 	// Scan for 5 seconds and return.
 	adapter.scan_for(5000);
 
-	// List the devices
-	cout << "The following devices were found:" << endl;
-	for (size_t i = 0; i < peripherals.size(); i++) {
-		cout << "[" << i << "] " << peripherals[i].identifier() << " [" << peripherals[i].address() << "]" << endl;
-	}
+	std::cout << "Connecting to " << peripheral.identifier() << " [" << peripheral.address() << "]" << std::endl;
+	peripheral.connect();
 
-	// Request which device needs to be connected too
-	optional<size_t> selection = Utils::getUserInputInt("Please select a device to connect to", peripherals.size() - 1);
-	if (!selection.has_value()) {
+	if (peripheral.is_connected()) {
+		std::cout << "Successfully connected to pressure glove" << std::endl;
 		return EXIT_FAILURE;
 	}
-
-	//Save and connected to the selected peripheral
-	pressureGlove = peripherals[selection.value()];
-	cout << "Connecting to " << pressureGlove.identifier() << " [" << pressureGlove.address() << "]" << endl;
-	pressureGlove.connect();
-
-	cout << "Successfully connected, printing services and characteristics.." << endl;
-
+	else {
+		std::cout << "Could not connect to found device" << std::endl;
+		return EXIT_FAILURE;
+	}
+	
 	// Store all service and characteristic uuids in a vector.
-	vector<pair<BluetoothUUID, BluetoothUUID>> uuids;
-	for (Service service : pressureGlove.services()) {
+	std::vector<std::pair<BluetoothUUID, BluetoothUUID>> uuids;
+	for (Service service : peripheral.services()) {
 		for (Characteristic characteristic : service.characteristics()) {
 			uuids.push_back(make_pair(service.uuid(), characteristic.uuid()));
 		}
 	}
 
 	// List found characteristics and services
-	cout << "The following services and characteristics were found:" << endl;
 	for (size_t i = 0; i < uuids.size(); i++) {
-		cout << "[" << i << "] " << uuids[i].first << " " << uuids[i].second << endl;
+		if (strncmp(uuids[i].second.c_str(), UUID_PRESSURE, 37) == 0) {
+			measUUID.first = uuids[i].first;
+			measUUID.second = uuids[i].second;
+			foundMeas = true;
+		}
+		else if (strncmp(uuids[i].second.c_str(), UUID_SAMPLING, 37) == 0) {
+			sampleSpeedUUID.first = uuids[i].first;
+			sampleSpeedUUID.second = uuids[i].second;
+			foundSpeed = true;
+		}
 	}
 
-	selection = Utils::getUserInputInt("Please select a characteristic to read", uuids.size() - 1);
-
-	if (!selection.has_value()) {
+	if (!foundMeas || !foundSpeed) {
+		std::cout << "Could not find sampling speed or measurement characteristic." << std::endl;
 		return EXIT_FAILURE;
 	}
-
-	measUUID.first = uuids[selection.value()].first;
-	measUUID.second = uuids[selection.value()].second;
-
 	return EXIT_SUCCESS;
 }
 
-int PressureSensors::Connect(std::string macAddress)
-{
-	return 0;
+std::string PressureSensors::GetMacAddress(void) {
+	// Return MAC address
+	if (peripheral.is_connected()) {
+		return peripheral.address();
+	}
+	// Return NULL if no glove is connected
+	return std::string("NULL");
 }
 
-void PressureSensors::OffsetCalibration(int index)
-{
+bool PressureSensors::IsConnected(void) {
+	// Check if a glove is connected
+	return peripheral.is_connected();
+}
+
+std::string PressureSensors::GetData(void) {
 	// Read characteristic
-	// Compare all differences
-	// Save the one with the largest difference
-
+	return peripheral.read(measUUID.first, measUUID.second);
 }
 
-string PressureSensors::GetData(void)
-{
-	// Read characterisitc
-	return 0;
-}
-
-int PressureSensors::GetLatestPoint(int index)
-{
-	// Read characteristic
-	// Split up received string
-	// Remove calibrated offset
-	return 0;
-}
-
-vector<int> PressureSensors::GetLatestPoint(const vector<int> indeces)
-{
-	// Read characteristic
-	// Split up received string
-	// Remove calibrated offset
-	return vector<int>();
+void PressureSensors::SetDelayInMillis(int delayInMillis) {
+	std::string data = std::to_string(delayInMillis);
+	peripheral.write_command(sampleSpeedUUID.first, sampleSpeedUUID.second, data);
 }

@@ -28,8 +28,8 @@ void SmartScanService::Init(DataAcqConfig acquisitionConfig) {
 	mDataAcq.Init(acquisitionConfig);
 }
 
-void SmartScanService::SensorSetup(DataAcqConfig acquisitionConfig) {
-	mDataAcq.SensorConfig(acquisitionConfig.refSensorSerial, acquisitionConfig.thumbSensorSerial, acquisitionConfig.indexSensorSerial, acquisitionConfig.middleSensorSerial);
+void SmartScanService::SensorSetup(digitSensor ref, digitSensor tmb, digitSensor ind, digitSensor mid) {
+	mDataAcq.SensorConfig(ref, tmb, ind, mid);
 }
 
 void SmartScanService::CorrectZOffset(int serialNumber)
@@ -70,6 +70,10 @@ int SmartScanService::HighestSensor(void) {
 		}
 	}
 	return connectedSerials.at(highestIndex);
+}
+
+std::vector<int> SmartScanService::GetPressureSnapshot() {
+	return mDataAcq.ReadPressure();
 }
 
 void SmartScanService::NewScan(ScanConfig config) {
@@ -180,6 +184,20 @@ bool SmartScanService::IsSerialConnected(int serialNumber) {
 	
 	// If no serials matched, return a false
 	return false;
+}
+
+bool SmartScanService::ConnectToGlove(std::string macAddress)
+{
+	return mDataAcq.BLEConnect(macAddress);
+}
+
+bool SmartScanService::IsPressureConnected(void)
+{
+	return mDataAcq.BLEConnected();
+}
+
+std::string SmartScanService::ConnectedMacAddr(void) {
+	return mDataAcq.BLEAddress();
 }
 
 void SmartScanService::StopScan() {

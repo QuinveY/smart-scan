@@ -51,10 +51,13 @@ namespace SmartScan
     class Point3
     {
     public:
-        double x, y, z, time;               // X, Y, Z and time.
-        unsigned short quality;             // Indicates magnetic interference.
-        unsigned short button;              // Indicates a button press.
-        //bool empty = true;                  // Indicates if the point has been assigned a real value
+        double x, y, z, time;                   // X, Y, Z and time.
+        unsigned short quality;                 // Indicates magnetic interference.
+        unsigned short button;                  // Indicates a button press.
+        int pressure;                           // Pressure measured at that location
+        int locPort, locSerial;                 // Sensor Data, port on trakstar, serial of sensor, index of pressure sensor
+
+        //bool empty = true;                    // Indicates if the point has been assigned a real value
         //bool artificial = false;
 
         Rotation3 r;                        // Roation object.

@@ -8,13 +8,14 @@
 #include <vector>
 #include <stdlib.h>
 
-// Custom includes
-#include "DirDef.h"
-#include "Point3.h"
-
 // Definitions
-#define UUID_PRESSURE	"00000002-0f8e-467a-a542-98fb7a3c85d6" 
-#define GLOVE_NAME		"Sendance-"
+#define UUID_PRESSURE	"00000002-0f8e-467a-a542-98fb7a3c85d6" // Pressure result characteristic
+#define UUID_SAMPLING	"00000003-0f8e-467a-a542-98fb7a3c85d6" // Sampling speed characteristic (in ms, if 0 only on change)
+#define GLOVE_NAME		"Sendance-Gloves_Right"				   // Name for connection purposes
+#define READ_START		'['
+#define READ_TIME		';'
+#define READ_SEPERATOR	','
+#define READ_STOP		']'
 
 struct PressurePoint {
 	int meas = 0;
@@ -30,31 +31,24 @@ public:
 	~PressureSensors(void);
 	
 	// Connecting and scan protocol
-	int Connect(void);
+	int ConnectToGlove(std::string MacAddress);
 
-	// Connect to a specific macAddress
-	// Arguments:	macAddres - mac address of device to connect 
-	int Connect(std::string macAddress);
+	// Return MAC address of connected glove
+	std::string GetMacAddress(void);
 
-	// Calibrate the sensors offset
-	// Argument:	index - index to calibrate from string
-	void OffsetCalibration(int index);
+	// Return true if a glove has been connected
+	bool IsConnected(void);
 
 	// Return the latest point of data in an unaltered string
 	std::string GetData(void);
 
-	// Get the latest point of a specific index
-	int GetLatestPoint(int index);
-
-	// Get the latest point of a specific index
-	// Arguments:	indeces - indeces to retreive data from
-	vector<int> GetLatestPoint(const vector<int> indeces);
+	// Set the measurement speed of the pressure gloves
+	void SetDelayInMillis(int delayInMillis);
 
 private:
 	int startTime = 0;
 	SimpleBLE::Adapter adapter;
 	std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID> measUUID;
-	std::vector<std::string> measBuf;
-	std::vector<std::vector<PressurePoint>> sortMeasBuf;
-	SimpleBLE::Peripheral pressureGlove;
+	std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID> sampleSpeedUUID;
+	SimpleBLE::Peripheral peripheral;
 };

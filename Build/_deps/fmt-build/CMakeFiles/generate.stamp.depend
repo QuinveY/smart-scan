@@ -1,0 +1,9 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CheckCXXCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/GNUInstallDirs.cmake
+C:/Users/Arjan/Documents/Github/smart-scan/Build/_deps/fmt-src/CMakeLists.txt
+C:/Users/Arjan/Documents/Github/smart-scan/Build/_deps/fmt-src/support/cmake/JoinPaths.cmake
+C:/Users/Arjan/Documents/Github/smart-scan/Build/_deps/fmt-src/support/cmake/cxx14.cmake

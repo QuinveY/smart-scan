@@ -12,8 +12,8 @@ DataAcqConfig::DataAcqConfig()
 
 }
 
-DataAcqConfig::DataAcqConfig(short int transmitterID, double measurementRate, double powerLineFrequency, double maximumRange, int refSensorSerial, double frameRotations[3])
-	: transmitterID { transmitterID }, measurementRate { measurementRate }, powerLineFrequency { powerLineFrequency }, maximumRange { maximumRange }, refSensorSerial { refSensorSerial }
+DataAcqConfig::DataAcqConfig(short int transmitterID, double measurementRate, double powerLineFrequency, double maximumRange, double frameRotations[3])
+	: transmitterID { transmitterID }, measurementRate { measurementRate }, powerLineFrequency { powerLineFrequency }, maximumRange { maximumRange }
 {
 	for (int i = 0; i < 3; i ++) {
 		this->frameRotations[i] = frameRotations[i]; // Copy the array.
@@ -60,22 +60,34 @@ void DataAcq::Init(DataAcqConfig acquisitionConfig)
 	this->Init();
 }
 
-void DataAcq::SensorConfig(int refer, int thumb, int index, int middle) {
-	mConfig.refSensorSerial = refer;
-	mConfig.thumbSensorSerial = thumb;
-	mConfig.indexSensorSerial = index;
-	mConfig.middleSensorSerial = middle;
+void DataAcq::SensorConfig(digitSensor ref, digitSensor tmb, digitSensor ind, digitSensor mid) {
+	// Save sensor serials
+	mConfig.reference = ref;
+	mConfig.thumb = tmb;
+	mConfig.index = ind;
+	mConfig.middle = mid;
 
-	// Remove reference sensor from sensor vector, because it is special.
-	if (mConfig.refSensorSerial >= 0) {
+	// Remove reference sensor from sensor vector, and save connected ports
+	if (mConfig.reference.serial >= 0) {
 		bool foundSensor = false;
 		for(int i = 0; i < mSerialBuff.size(); i++) {
-			if (mSerialBuff[i] == mConfig.refSensorSerial) {
-				refSensorPort = mPortNumBuff[i];
+
+			if (mSerialBuff[i] == mConfig.reference.serial) {
+				mConfig.reference.port = mPortNumBuff[i];
 				mSerialBuff.erase(mSerialBuff.cbegin()+i);
 				mPortNumBuff.erase(mPortNumBuff.cbegin()+i);
 				mRawBuff.pop_back();
 				foundSensor = true;
+				i--; // Vector will shrink once reference serial is remove, yet some serial might still be present
+			}
+			else if (mSerialBuff[i] == mConfig.thumb.serial) {
+				mConfig.thumb.port = mPortNumBuff[i];
+			}
+			else if (mSerialBuff[i] == mConfig.index.serial) {
+				mConfig.index.port = mPortNumBuff[i];
+			}
+			else if (mSerialBuff[i] == mConfig.middle.serial) {
+				mConfig.middle.port = mPortNumBuff[i];
 			}
 		}
 
@@ -84,7 +96,7 @@ void DataAcq::SensorConfig(int refer, int thumb, int index, int middle) {
 			throw ex_acq("Could not find the reference sensor specified.", __func__, __FILE__);
 		}
 		// Set the reference sensor to use rotation matrices instead of Euler angles.
-		mTSCtrl.SetRefSensorFormat(refSensorPort);
+		mTSCtrl.SetRefSensorFormat(mConfig.reference.port);
 	}
 
 }
@@ -93,7 +105,7 @@ void DataAcq::CorrectZOffset(int serialNumber)
 {
 	// Get a raw Z coordinate sample and take the height of the transmitter casing into account.
     Point3 rawSample = this->GetSingleSample(serialNumber, true);
-    Point3 zOnly = Point3(0.0, 0.0, zCaseOffset - rawSample.z, rawSample.r);
+    Point3 zOnly = Point3(0.0, 0.0, Z_CASE_OFFSET - rawSample.z, rawSample.r);
 
 	// Rotate that Z offset with the roll rotation of the sensor.
     this->AngleCorrect(&zOnly);
@@ -172,8 +184,8 @@ Point3 DataAcq::GetSingleSample(int sensorSerial, bool raw)
 		//this->angleCorrect(&rawPoint);
 	}
 	// Check if a reference sensor is defined.
-	else if (refSensorPort > -1) {
-		refMatrix = mTSCtrl.GetRefRecord(refSensorPort);
+	else if (mConfig.reference.port > -1) {
+		refMatrix = mTSCtrl.GetRefRecord(mConfig.reference.port);
 		ReferenceCorrect(&refMatrix, &rawPoint);
 	}
 
@@ -193,7 +205,7 @@ const int DataAcq::NumAttachedTransmitters() const
 const int DataAcq::NumAttachedSensors(bool includeRef) const
 {
 	// Add + 1 since the reference sensor is removed from the sensor list.
-	if (includeRef && refSensorPort > -1) {
+	if (includeRef && mConfig.reference.port > -1) {
 		return (const int)mPortNumBuff.size() + 1;
 	}
 	return (const int)mPortNumBuff.size();
@@ -201,6 +213,66 @@ const int DataAcq::NumAttachedSensors(bool includeRef) const
 
 const std::vector<int> DataAcq::GetSerialNumbers(void) {
 	return mSerialBuff;
+}
+
+bool DataAcq::BLEConnect(std::string macAddress) {
+	// Try and connect to the gloves
+	if (pressureGloves.ConnectToGlove(macAddress) == EXIT_SUCCESS) {
+		// Return true if it succeeds
+		return true;
+	}
+	// Return false if it fails
+	return false;
+}
+
+bool DataAcq::BLEConnected(void)
+{
+	return pressureGloves.IsConnected();
+}
+
+std::string DataAcq::BLEAddress(void) {
+	return pressureGloves.GetMacAddress();
+}
+
+std::vector<int> DataAcq::ReadPressure(void) {
+	std::vector<int> vectorizedData;
+	std::string rawData = pressureGloves.GetData();
+
+	// Find major seperators
+	size_t startMeas = rawData.find(READ_START);
+	size_t timeEnd = rawData.find(READ_TIME) - 1;
+	size_t stopMeas = rawData.find(READ_STOP);
+
+	// Save the time
+	vectorizedData.at(0) = atoi(rawData.substr((startMeas + 1), (timeEnd - startMeas)).c_str());
+
+	// Initialize vectorization
+	size_t start = timeEnd + 2;
+	size_t stop = rawData.find(READ_SEPERATOR, start);
+	bool allIsMeasured = false;
+	size_t crntIndex = 1;
+
+	// Keep going until no more seperators can be found
+	do {
+		// Save integer at found location
+		vectorizedData.at(crntIndex) = atoi(rawData.substr(start, (stop + 1 - start)).c_str());
+		
+		// Update the start index
+		start = stop + 2;
+
+		// Find new stop index
+		stop = rawData.find(READ_SEPERATOR, stop + 1) - 1;
+
+		// Go to next vector element
+		crntIndex++;
+	} while (rawData.find(READ_SEPERATOR, stop - 1) != std::string::npos);
+
+	vectorizedData.at(crntIndex) = atoi(rawData.substr(start, (stopMeas - start)).c_str());
+	return vectorizedData;
+}
+
+int DataAcq::ReadPressureSingle(int index) {
+	return ReadPressure().at(index);
 }
 
 void DataAcq::RegisterRawDataCallback(std::function<void(const std::vector<Point3>&)> callback)
@@ -267,8 +339,8 @@ void DataAcq::DataAcquisition()
             time += elapsedTime.count();
 
 			// Check if a reference sensor is defined.
-			if (refSensorPort > -1) {
-				refMatrix = mTSCtrl.GetRefRecord(refSensorPort);
+			if (mConfig.reference.port > -1) {
+				refMatrix = mTSCtrl.GetRefRecord(mConfig.reference.port);
 			}
 
             for (int i = 0; i < mPortNumBuff.size(); i++) {
@@ -282,8 +354,23 @@ void DataAcq::DataAcquisition()
 				// Add total measurement time to point3.
 				raw.time = time;
 
+				// Append sensor data and pressure
+				raw.locPort = mPortNumBuff[i];
+				if (mConfig.thumb.port == mPortNumBuff[i]) {
+					raw.locSerial = mConfig.thumb.serial;
+					raw.pressure = ReadPressureSingle(mConfig.thumb.index);
+				}
+				else if (mConfig.index.port == mPortNumBuff[i]) {
+					raw.locSerial = mConfig.index.serial;
+					raw.pressure = ReadPressureSingle(mConfig.index.index);
+				}
+				else if (mConfig.middle.port == mPortNumBuff[i]) {
+					raw.locSerial = mConfig.middle.serial;
+					raw.pressure = ReadPressureSingle(mConfig.middle.index);
+				}
+
 				// Correct point for reference sensor
-				if (refSensorPort > -1) {
+				if (mConfig.reference.port > -1) {
 					ReferenceCorrect(&refMatrix, &raw);
 				}
 
@@ -326,16 +413,16 @@ void DataAcq::ReferenceCorrect(Point3Ref* refPoint, Point3* sensorPoint)
 void DataAcq::AngleCorrect(Point3* sensorPoint)
 {
 	// Use the azimuth to calculate the rotation around the z-axis.
-	//double x_new = sensorPoint->x * cos(sensorPoint->r.z * toRad) + sensorPoint->y * sin(sensorPoint->r.z * toRad);
-	//double y_new = sensorPoint->y * cos(sensorPoint->r.z * toRad) - sensorPoint->x * sin(sensorPoint->r.z * toRad);
+	//double x_new = sensorPoint->x * cos(sensorPoint->r.z * CONV_TO_RAD) + sensorPoint->y * sin(sensorPoint->r.z * CONV_TO_RAD);
+	//double y_new = sensorPoint->y * cos(sensorPoint->r.z * CONV_TO_RAD) - sensorPoint->x * sin(sensorPoint->r.z * CONV_TO_RAD);
 
 	// Use the elevation to calculate the rotation around the y-axis.
-	//sensorPoint->x = x_new * cos(sensorPoint->r.y * toRad) - sensorPoint->z * sin(sensorPoint->r.y * toRad);
-	//double z_new = sensorPoint->z * cos(sensorPoint->r.y * toRad) + x_new * sin(sensorPoint->r.y * toRad);
+	//sensorPoint->x = x_new * cos(sensorPoint->r.y * CONV_TO_RAD) - sensorPoint->z * sin(sensorPoint->r.y * CONV_TO_RAD);
+	//double z_new = sensorPoint->z * cos(sensorPoint->r.y * CONV_TO_RAD) + x_new * sin(sensorPoint->r.y * CONV_TO_RAD);
 
 	// Use the roll difference to calculate the rotation around the x-axis.
-	double y_new = sensorPoint->y * cos(sensorPoint->r.x * toRad) + sensorPoint->z * sin(sensorPoint->r.x * toRad);
-	double z_new = sensorPoint->z * cos(sensorPoint->r.x * toRad) - sensorPoint->y * sin(sensorPoint->r.x * toRad);
+	double y_new = sensorPoint->y * cos(sensorPoint->r.x * CONV_TO_RAD) + sensorPoint->z * sin(sensorPoint->r.x * CONV_TO_RAD);
+	double z_new = sensorPoint->z * cos(sensorPoint->r.x * CONV_TO_RAD) - sensorPoint->y * sin(sensorPoint->r.x * CONV_TO_RAD);
 
     sensorPoint->y = y_new;
     sensorPoint->z = z_new;

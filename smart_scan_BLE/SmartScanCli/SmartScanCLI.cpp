@@ -20,7 +20,6 @@
 #include "../SmartScanService/inc/SmartScanService.h"
 #include "../SmartScanService/inc/DirDef.h"
 #include "../SmartScanService/inc/ini.h"
-#include "../SmartScanService/inc/BLEController.h"
 
 using namespace std;
 using namespace SmartScan;
@@ -33,7 +32,8 @@ bool initDone = false;
 // Pre-define functions
 void Usage();
 void RawPrintCallback(const vector<Point3>& record);
-int SensorIdentification(const char* sensorParam);
+int SerialIdentification(const char* parameter);
+int IndexIdentification(const char* parameter);
 int GetSensorID(const char* parameter);
 
 // Create SmartScanService object
@@ -41,7 +41,6 @@ SmartScanService s3;
 DataAcqConfig acquisitionConfig;
 fs::path settingsPath(DIR_SETTINGS);
 ini::File iniFile;
-PressureSensors pressureGloves;
 
 int main() {
 	// Print welcome screen.
@@ -120,7 +119,7 @@ int main() {
 
 				// Setup powerline frequency
 				if (!iniFile[SECTION_SYSTEM].has_key(PARAM_SYS_PWR_LINE_FREQ)) {
-					cout << "\t\tPlease enter the desired power line frequency (50 or 60) >" << flush;
+					cout << "\t\tPlease enter the desired power line frequency (50 or 60) > " << flush;
 					while (!(cin >> acquisitionConfig.powerLineFrequency)) { // Make sure the user can only input numbers.
 						cin.clear();
 						cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -171,6 +170,38 @@ int main() {
 				cout << "\t\t\tSensor's roll offset is set to " << acquisitionConfig.frameRotations[2] << " degrees" << endl;
 				initDone = true;
 			}
+
+			if (!iniFile.has_section(SECTION_BLE)) {
+				iniFile.add_section(SECTION_BLE);
+				iniFile.write(DIR_SETTINGS);
+				initDone = false;
+			}
+
+			if (iniFile.has_section(SECTION_BLE)) {
+				// Check if a previous mac address has been saved
+				if (!iniFile[SECTION_BLE].has_key(PARAM_BLE_MAC_ADDR)) {
+					s3.ConnectToGlove();
+					iniFile[SECTION_BLE].set<string>(PARAM_BLE_MAC_ADDR, s3.ConnectedMacAddr());
+					iniFile.write(DIR_SETTINGS);
+				}
+				else {
+					// Look for the mac address to prevent connecting to the wrong glove
+					s3.ConnectToGlove(iniFile[SECTION_BLE].get<string>(PARAM_BLE_MAC_ADDR));
+
+					// Check if the saved and connected mac address are the same
+					if (strcmp(s3.ConnectedMacAddr().c_str(), iniFile[SECTION_BLE].get<string>(PARAM_BLE_MAC_ADDR).c_str()) != 0) {
+						iniFile[SECTION_BLE].set<string>(PARAM_BLE_MAC_ADDR, s3.ConnectedMacAddr());
+
+						// Reset finger indeces
+						iniFile[SECTION_BLE].set<int>(PARAM_BLE_THUMB_INDEX, -1);
+						iniFile[SECTION_BLE].set<int>(PARAM_BLE_INDEX_INDEX, -1);
+						iniFile[SECTION_BLE].set<int>(PARAM_BLE_MIDDLE_INDEX, -1);
+						cout << "New glove connected, saving new MAC address to INI file." << endl;
+					}
+				}
+
+				initDone = true;
+			}
 		}
 		else {
 			// Create settings INI
@@ -205,14 +236,69 @@ int main() {
 	cout << "\t\tFound " << s3.NumAttachedTransmitters() << " attached transmitter(s)" << endl; 
 	cout << "\t\tFound " << s3.NumAttachedSensors(true) << " attached sensor(s)" << endl;
 
-	acquisitionConfig.refSensorSerial = SensorIdentification(PARAM_SNSR_REF_SERIAL);
-	acquisitionConfig.thumbSensorSerial = SensorIdentification(PARAM_SNSR_THUMB_SERIAL);
-	acquisitionConfig.indexSensorSerial = SensorIdentification(PARAM_SNSR_INDEX_SERIAL);
-	acquisitionConfig.middleSensorSerial = SensorIdentification(PARAM_SNSR_MIDDLE_SERIAL);
+	// Sensor setup
+	initDone = false;
+	do {
+		digitSensor reference, thumb, index, middle;
+		vector<int> calOffset;
+		// Add sensor section incase it's not present
+		if (!iniFile.has_section(SECTION_SENSOR)) {
+			iniFile.add_section(SECTION_SENSOR);
+			iniFile.write(DIR_SETTINGS);
+			initDone = false;
+		}
 
-	s3.SensorSetup(acquisitionConfig);
+		// Add Bluetooth section incase it's not present
+		if (!iniFile.has_section(SECTION_BLE)) {
+			iniFile.add_section(SECTION_BLE);
+			iniFile.write(DIR_SETTINGS);
+			initDone = false;
+		}
 
-	pressureGloves.Connect();
+		// Config the locational sensors
+		reference.serial = SerialIdentification(PARAM_SNSR_REF_SERIAL);
+		thumb.serial = SerialIdentification(PARAM_SNSR_THUMB_SERIAL);
+		index.serial = SerialIdentification(PARAM_SNSR_INDEX_SERIAL);
+		middle.serial = SerialIdentification(PARAM_SNSR_MIDDLE_SERIAL);
+
+		cout << "Please make sure none of the pressure sensors are touching anything." << endl;
+		cout << "Once there is no pressure on any of the pressure sensors, press enter with your other hand." << endl;
+		cin.ignore(10, '\n');
+
+		// Read all sensors
+		if (s3.IsPressureConnected()) {
+			calOffset = s3.GetPressureSnapshot();
+		}
+		else {
+			cout << "No device found, please makes sure the pressure sensors are connected." << endl;
+		}
+
+		// Config the pressure sensors
+		if (thumb.serial != -1) {
+			thumb.index = IndexIdentification(PARAM_BLE_THUMB_INDEX);
+			thumb.pressureOffset = calOffset.at(thumb.index);
+		}
+
+		if (index.serial != -1) {
+			index.index = IndexIdentification(PARAM_BLE_INDEX_INDEX);
+			index.pressureOffset = calOffset.at(index.index);
+		}
+
+		if (middle.serial != -1) {
+			middle.index = IndexIdentification(PARAM_BLE_MIDDLE_INDEX);
+			middle.pressureOffset = calOffset.at(middle.index);
+		}
+
+		// Pass info on the the SmartScanService for finalization of initialization
+		if (reference.serial != -1) {
+			s3.SensorSetup(reference, thumb, index, middle);
+			initDone = true;
+		}
+		// Without reference sensor the program will break and/or crash
+		else {
+			cout << "A reference sensor is required for the program to operate." << endl;
+		}
+	} while (!initDone);
 
 	// Print the help screen:
 	cout << "Welcome to the SmartScan command line application! (Type help to see a full list of commands)" << endl;
@@ -220,7 +306,7 @@ int main() {
 	char cmd[128];
 	do {
 		// Print prompt.
-		cout << "SmartScan>";
+		cout << "SmartScan > ";
 
 		// Wait for user input and store it in cmd.
 		cin.getline(cmd, 128);
@@ -613,54 +699,113 @@ void RawPrintCallback(const vector<Point3>& record)
 	cout << ' ' << '\r' << flush;
 }
 
-// Identify a specific sensor serial ID
-int SensorIdentification(const char* sensorParam) {
-	char input[128];
+// Identify a specific sensor serial ID (positional)
+int SerialIdentification(const char* parameter) {
+	char input[128];						// Cin buffer
+	string name = parameter;				// For displaying the correct name
+	size_t cutIndex = name.find("Serial");	// Location where to cut the string
 
-	// Open and/or make INI file in case it has not been made
-	if (!fs::exists(DIR_SETTINGS)) {
-		// Create settings INI
-		fstream settingsINI(DIR_SETTINGS);
-		settingsINI.open(DIR_SETTINGS, ios::in | ios::out | ios::trunc);
-		settingsINI.close();
+	// Check if the requested key is present and if its also connected to the trakstar
+	if (iniFile[SECTION_SENSOR].has_key(parameter) && s3.IsSerialConnected(iniFile[SECTION_SENSOR].get<int>(parameter))) {
+		return iniFile[SECTION_SENSOR].get<int>(parameter);
 	}
-
-	// Add sensor section incase it's not present
-	if (!iniFile.has_section(SECTION_SENSOR)) {
-		iniFile.add_section(SECTION_SENSOR);
-		iniFile.write(DIR_SETTINGS);
-	}
-
-	if (!iniFile[SECTION_SENSOR].has_key(sensorParam) || !s3.IsSerialConnected(iniFile[SECTION_SENSOR].get<int>(sensorParam))) {
-		cout << "\t\tIs there a " << sensorParam << " sensor (y/n) > " << flush;
+	// If thats not the case, walk through recognition procedure
+	else {
+		// Ask the user if the specified sensor has been connected
+		cout << "\t\tIs there a " << parameter << " sensor (y/n) > " << flush;
 		do {
 			cin.getline(input, 128);
 
 			if (strncmp(input, "y", 1) == 0 || strncmp(input, "Y", 1) == 0) {
-				// Check which sensor is the highest
-				cout << "\t\t\tPlease hold up the " << sensorParam << " sensor and hit enter when ready." << flush;
+				// Wait for the user to be ready
+				cout << "\t\t\tPlease hold up the " << name.substr(0, cutIndex) << " sensor and hit enter when ready." << flush;
 				cin.ignore(10, '\n');
-				iniFile[SECTION_SENSOR].set<int>(sensorParam, s3.HighestSensor());
+
+				// Check which sensor is the highest and save it to the INI
+				iniFile[SECTION_SENSOR].set<int>(parameter, s3.HighestSensor());
 				iniFile.write(DIR_SETTINGS);
-				cout << "\t\t\t\t" << sensorParam << " set to: " << iniFile[SECTION_SENSOR].get<int>(sensorParam) << endl;
-				return iniFile[SECTION_SENSOR].get<int>(sensorParam);
+
+				// Display measured serial number for confirmation
+				cout << "\t\t\t\t" << name.substr(0, cutIndex) << " set to: " << iniFile[SECTION_SENSOR].get<int>(parameter) << endl;
+
+				// Return the saved serial number
+				return iniFile[SECTION_SENSOR].get<int>(parameter);
 			}
 			else if (strncmp(input, "n", 1) == 0 || strncmp(input, "N", 1) == 0) {
-				cout << "\t\t\t\tSkipped: " << sensorParam << " sensor." << endl; 
-				iniFile[SECTION_SENSOR].set<int>(sensorParam, -1);
+				// Inform the user that the sensor will be skipped
+				cout << "\t\t\t\tSkipped: " << name.substr(0, cutIndex) << " sensor." << endl;
+
+				// Set the INI file value to -1 so that the user will be asked about configuring it next time
+				iniFile[SECTION_SENSOR].set<int>(parameter, -1);
 				iniFile.write(DIR_SETTINGS);
-				return iniFile[SECTION_SENSOR].get<int>(sensorParam);
+
+				// Return the saved serial number
+				return iniFile[SECTION_SENSOR].get<int>(parameter);
 			}
 			else {
 				cout << "\t\t\tIncorrect input please try again." << flush;
 			}
 		} while (true);
 	}
-	else {
-		return iniFile[SECTION_SENSOR].get<int>(sensorParam);
-	}
 }
 
+// Identify a specific sensor index value (pressure)
+int IndexIdentification(const char* parameter) {
+	string name = parameter;
+	size_t cutIndex = name.find("Index");
+
+	if (!iniFile.has_section(SECTION_BLE)) {
+		iniFile.add_section(SECTION_BLE);
+		iniFile.write(DIR_SETTINGS);
+	}
+
+	if (iniFile.has_section(SECTION_BLE) && iniFile[SECTION_BLE].has_key(parameter) && iniFile[SECTION_BLE].get<int>(parameter) == -1) {
+		vector<int> baseline;
+		vector<int> pushed;
+		int maxDifference = 0;
+		int foundIndex = 0;
+
+		// Instruct the user to not touch anything with their hands
+		cout << "Please make sure none of the pressure sensors are touching anything." << endl;
+		cout << "Once there is no pressure on any of the pressure sensors, press enter with your other hand." << endl;
+		cin.ignore(10, '\n');
+
+		// Read all sensors
+		if (s3.IsPressureConnected()) {
+			baseline = s3.GetPressureSnapshot();
+		}
+		else {
+			cout << "No device found, please makes sure the pressure sensors are connected." << endl;
+		}
+
+		cout << "Push the " << name.substr(0, cutIndex) << " sensor on a hard surface." << endl;
+		cout << "Make sure no other sensors are pressed. Once pushing, press enter with your other hand." << endl;
+		cin.ignore(10, '\n');
+
+		if (s3.IsPressureConnected()) {
+			pushed = s3.GetPressureSnapshot();
+		}
+		else {
+			cout << "No device found, please makes sure the pressure sensors are connected." << endl;
+		}
+
+		for (size_t i = 1; i < baseline.size(); i++) {
+			if (maxDifference < (pushed.at(i) - baseline.at(i))) {
+				maxDifference = (pushed.at(i) - baseline.at(i));
+				foundIndex = (int)i;
+			}
+		}
+
+		iniFile[SECTION_BLE].set<int>(parameter, foundIndex);
+
+		cout << "The " << name.substr(0, cutIndex) << " sensor is on index " << iniFile[SECTION_BLE].get<int>(parameter) << endl;
+
+	}
+
+	return iniFile[SECTION_BLE].get<int>(parameter);
+}
+
+// Retrieve sensor serials from INI
 int GetSensorID(const char* parameter) {
 	if (iniFile[SECTION_SENSOR].has_key(parameter)) {
 		return iniFile[SECTION_SENSOR].get<int>(parameter);

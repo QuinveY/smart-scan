@@ -36,7 +36,7 @@ namespace SmartScan
 		// Assign the connected sensor IDs 
 		// Arguments:
 		// - acquisitionConfig : Configuration struct that specifies the settings with which the TrakStar device is initalized. 
-		void SensorSetup(DataAcqConfig acquisitionConfig);
+		void SensorSetup(digitSensor ref, digitSensor tmb, digitSensor ind, digitSensor mid);
 
 		// Set the Z offset of a specifc sensor. This is needed to compensate for the sensor being put on top of the fingers.
 		// Arguments:
@@ -51,6 +51,9 @@ namespace SmartScan
 
 		// Return the sensor ID of which is the highest compared to the others
 		int HighestSensor(void);
+
+		// Return the measured pressure values
+		std::vector<int> GetPressureSnapshot(void);
 
 		// Creates a new scan and adds it to the scan list.
 		// Arguments:
@@ -81,6 +84,15 @@ namespace SmartScan
 		// Arguments:
 		// - sensorNumber : Serial number of the sensor to get sample from.
 		bool IsSerialConnected(int serialNumber);
+
+		// Automatically connect to the pressure sensor glove
+		bool ConnectToGlove(std::string macAddress = "NULL");
+
+		// Check if the pressure glove is connected
+		bool IsPressureConnected(void);
+
+		// Return the MAC address of connected BLE device
+		std::string ConnectedMacAddr(void);
 
 		// Stop the data acquisition and with that all the scans. The scans will conitnue to filter until caught up with data acquisition.
 		void StopScan();

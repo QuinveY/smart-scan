@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FA4C1F14-3B93-32DB-AFAD-92D3D3767EB7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>simpleble</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">simpleble.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">simpleble</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">simpleble.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">simpleble</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">simpleble.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">simpleble</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">simpleble.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">simpleble</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\include;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\external;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows;C:\Users\Arjan\Documents\Github\smart-scan\Build\_deps\fmt-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Arjan/Documents/Github/smart-scan/Build/simpleble/export"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\include;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\external;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows;C:\Users\Arjan\Documents\Github\smart-scan\Build\_deps\fmt-src\include;C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\include;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\external;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows;C:\Users\Arjan\Documents\Github\smart-scan\Build\_deps\fmt-src\include;C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\include;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\external;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows;C:\Users\Arjan\Documents\Github\smart-scan\Build\_deps\fmt-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Arjan/Documents/Github/smart-scan/Build/simpleble/export"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\include;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\external;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows;C:\Users\Arjan\Documents\Github\smart-scan\Build\_deps\fmt-src\include;C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\include;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\external;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows;C:\Users\Arjan\Documents\Github\smart-scan\Build\_deps\fmt-src\include;C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\include;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\external;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows;C:\Users\Arjan\Documents\Github\smart-scan\Build\_deps\fmt-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Arjan/Documents/Github/smart-scan/Build/simpleble/export"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\include;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\external;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows;C:\Users\Arjan\Documents\Github\smart-scan\Build\_deps\fmt-src\include;C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\include;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\external;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows;C:\Users\Arjan\Documents\Github\smart-scan\Build\_deps\fmt-src\include;C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\include;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\external;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows;C:\Users\Arjan\Documents\Github\smart-scan\Build\_deps\fmt-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Arjan/Documents/Github/smart-scan/Build/simpleble/export"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;FMT_HEADER_ONLY=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\include;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\external;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows;C:\Users\Arjan\Documents\Github\smart-scan\Build\_deps\fmt-src\include;C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\include;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\external;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows;C:\Users\Arjan\Documents\Github\smart-scan\Build\_deps\fmt-src\include;C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Arjan/Documents/Github/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Arjan/Documents/Github/smart-scan/smart_scan_BLE -BC:/Users/Arjan/Documents/Github/smart-scan/Build --check-stamp-file C:/Users/Arjan/Documents/Github/smart-scan/Build/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\VERSION;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\epilogue.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\find\Findfmt.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\parse_version.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\prelude.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Arjan/Documents/Github/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Arjan/Documents/Github/smart-scan/smart_scan_BLE -BC:/Users/Arjan/Documents/Github/smart-scan/Build --check-stamp-file C:/Users/Arjan/Documents/Github/smart-scan/Build/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\VERSION;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\epilogue.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\find\Findfmt.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\parse_version.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\prelude.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Arjan/Documents/Github/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Arjan/Documents/Github/smart-scan/smart_scan_BLE -BC:/Users/Arjan/Documents/Github/smart-scan/Build --check-stamp-file C:/Users/Arjan/Documents/Github/smart-scan/Build/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\VERSION;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\epilogue.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\find\Findfmt.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\parse_version.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\prelude.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Arjan/Documents/Github/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Arjan/Documents/Github/smart-scan/smart_scan_BLE -BC:/Users/Arjan/Documents/Github/smart-scan/Build --check-stamp-file C:/Users/Arjan/Documents/Github/smart-scan/Build/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\VERSION;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\epilogue.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\find\Findfmt.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\parse_version.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\prelude.cmake;C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Arjan\Documents\Github\smart-scan\Build\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\base\Adapter.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\base\Peripheral.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\base\Service.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\base\Characteristic.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\base\Descriptor.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common\ServiceBase.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common\CharacteristicBase.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\common\DescriptorBase.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\Exceptions.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\Utils.cpp">
+      <ObjectFileName>$(IntDir)/src/Utils.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\Logging.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe\AdapterSafe.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\frontends\safe\PeripheralSafe.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders\AdapterBuilder.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders\PeripheralBuilder.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders\ServiceBuilder.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders\CharacteristicBuilder.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\builders\DescriptorBuilder.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows\AdapterBase.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows\PeripheralBase.cpp" />
+    <ClCompile Include="C:\Users\Arjan\Documents\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src\backends\windows\Utils.cpp">
+      <ObjectFileName>$(IntDir)/src/backends/windows/Utils.cpp.obj</ObjectFileName>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Arjan\Documents\Github\smart-scan\Build\ZERO_CHECK.vcxproj">
+      <Project>{A23031C0-A0B4-3482-9B33-33A4C87E9143}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
