@@ -41,7 +41,8 @@ target_include_directories(main PRIVATE ${smartscan_lib})
 
 #Link the necessary libraries so that main can utilize the BLE, SmartScanService and AT libraries and functions.
 target_link_libraries(main PRIVATE ATC3DG64)
-target_link_libraries(main PRIVATE SmartScanService)        
+target_link_libraries(main PRIVATE SmartScanService)        	
+target_link_libraries(main PRIVATE simpleble::simpleble)
 						 
 #Installable Setup
 install(TARGETS ATC3DG64 RUNTIME DESTINATION bin)

@@ -28,4 +28,4 @@ set(simpleble 			${CMAKE_CURRENT_SOURCE_DIR}/../simpleble_install/simpleble)
 add_subdirectory(${simpleble}	  ${CMAKE_CURRENT_BINARY_DIR}/../simpleble)
 
 add_library(SmartScanService STATIC  ${SOURCES})	
-target_link_libraries(SmartScanService PRIVATE simpleble::simpleble)    
+target_link_libraries(SmartScanService PRIVATE simpleble::simpleble)

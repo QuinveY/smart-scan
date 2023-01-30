@@ -20,6 +20,7 @@
 #include "../SmartScanService/inc/SmartScanService.h"
 #include "../SmartScanService/inc/DirDef.h"
 #include "../SmartScanService/inc/ini.h"
+#include "../SmartScanService/inc/BLEController.h"
 
 using namespace std;
 using namespace SmartScan;
@@ -40,6 +41,7 @@ SmartScanService s3;
 DataAcqConfig acquisitionConfig;
 fs::path settingsPath(DIR_SETTINGS);
 ini::File iniFile;
+PressureSensors pressureGloves;
 
 int main() {
 	// Print welcome screen.
@@ -209,6 +211,8 @@ int main() {
 	acquisitionConfig.middleSensorSerial = SensorIdentification(PARAM_SNSR_MIDDLE_SERIAL);
 
 	s3.SensorSetup(acquisitionConfig);
+
+	pressureGloves.Connect();
 
 	// Print the help screen:
 	cout << "Welcome to the SmartScan command line application! (Type help to see a full list of commands)" << endl;
