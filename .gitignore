@@ -12,6 +12,7 @@
 
 # CMAKE builds
 cmake_build/
+Build/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
