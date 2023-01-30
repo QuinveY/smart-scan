@@ -2,13 +2,12 @@
 
 #include "C-Python_Collab-Test.h"
 
-
 // Uncomment for debug mode
 #define DEBUG
 
 int main() {
 	#ifdef DEBUG
-		cout << "Directory we're in: " << current_path() << endl << endl;
+		cout << "Directory we're in:\t" << current_path() << endl << endl;
 	#endif // DEBUG	
 
 	// Plugin folder naming
@@ -21,27 +20,34 @@ int main() {
 	//cout << argv << endl << endl;
 
 	try { // always check for Python_exceptions
-		//cout << "Simple Python output:" << endl;
-		// Start Python
-		//init_python("smartscan1");
-
-		//// Verify Python Embedded is used
+		// Verify Python Embedded is used
 		//#ifdef DEBUG
+		//	cout << "Simple Python output:" << endl;
+		//	// Start Python
+		//	init_python("smartscan");
+		//	//Py_Initialize();
+
 		//	PyRun_SimpleString("import sys\n");
+		//	cout << "sys.path:" << endl;
 		//	PyRun_SimpleString("print(sys.path)\n");
+		//	cout << endl << "sys.executable:" << endl;
 		//	PyRun_SimpleString("print(sys.executable)\n");
-		//#endif // DEBUG	
-
-		//PyRun_SimpleString("print('Helo from Python')\n");
-		//PyRun_SimpleString("print(pow(4, 2))\n");
-		//PyRun_SimpleString("print(4*4)\n");
-
-		//PyRun_SimpleString("import numpy\n");
-		//PyRun_SimpleString("print(numpy.pi)\n");
+		//	cout << endl << "sys.module_search_paths:" << endl;
+		//	PyRun_SimpleString("print(sys.module_search_paths)\n");
 		//
-		//Py_Finalize();
-		
-		cout << endl;
+		//	cout << endl << "standard python:" << endl;
+		//	PyRun_SimpleString("print('Helo from Python')\n");
+		//	PyRun_SimpleString("print(pow(4, 2))\n");
+		//	PyRun_SimpleString("print(4*4)\n");
+
+		//	cout << endl << "importing stuff:" << endl;
+		//	PyRun_SimpleString("import numpy\n");
+		//	PyRun_SimpleString("print(numpy.pi)\n");
+		//
+		//	Py_Finalize();
+		//
+		//	cout << endl;
+		//#endif // DEBUG
 
 		std::vector<std::vector<Point3>> mRawBuff;
 		// Initialize raw data buffer.
@@ -57,8 +63,10 @@ int main() {
 		
 		pythonArgs.push_back(askUserWhatFilter(fileList, pluginFolder));
 
-		pythonArgs.push_back("ballExploder");
-		//pythonArgs.push_back();
+		pythonArgs.push_back("filterFunction");
+		pythonArgs.push_back("2");
+		pythonArgs.push_back("3");
+		pythonArgs.push_back("2");
 			
 		int executed = pyHandler(pythonArgs, pluginFolder);
 		if (executed != 0) {
@@ -66,7 +74,7 @@ int main() {
 		}
 	}
 	catch (const std::exception& e) {
-		cout << "Error: " << e.what() << endl;
+		cout << "Error:\t" << e.what() << endl;
 	}
 	
 	cout << endl << endl;
@@ -103,12 +111,12 @@ vector<string> pluginFilesList(path pluginFolder, string fileName) {
 
 		for (const auto& entry : directory_iterator(pluginFolder)) {	// loop through all files in this folder
 			#ifdef DEBUG
-				cout << "Found file: " << entry.path() << endl;
+				cout << "Found file:\t" << entry.path() << endl;
 			#endif
 			
 			if (entry.path().extension() == ".py") {					// check for python files
 				#ifdef DEBUG
-					cout << "Saving file: " << entry.path() << endl;
+					cout << "Saving file:\t" << entry.path() << endl;
 				#endif
 
 				filesFound.push_back(entry.path().string());
@@ -116,7 +124,7 @@ vector<string> pluginFilesList(path pluginFolder, string fileName) {
 			}
 			if (entry.path().extension() == ".r") {						// check for R files
 				#ifdef DEBUG
-					cout << "Saving file: " << entry.path() << endl;
+					cout << "Saving file:\t" << entry.path() << endl;
 				#endif
 
 				filesFound.push_back(entry.path().string());
@@ -125,7 +133,7 @@ vector<string> pluginFilesList(path pluginFolder, string fileName) {
 		}
 
 		#ifdef DEBUG
-			cout << endl << "Files found: " << endl;
+			cout << endl << "Files found:" << endl;
 			for (int i = 0; i < filesFound.size(); i++) {
 				cout << filesFound[i] << endl;
 			}
@@ -136,7 +144,7 @@ vector<string> pluginFilesList(path pluginFolder, string fileName) {
 		//file.close();
 	}
 	catch (filesystem_error const& e) {
-		cout << endl << "Error: " << e.what() << endl;
+		cout << endl << "Error:\t" << e.what() << endl;
 	}
 
 	return filesFound;
@@ -165,7 +173,7 @@ bool folderCheck(path folderPath) {
 		return true;
 	}
 	catch (filesystem_error e) {
-		cout << endl << "Error: " << e.what() << endl;
+		cout << endl << "Error:\t" << e.what() << endl;
 		return false;
 	}
 }
@@ -196,7 +204,7 @@ bool txtFileCheck(path fileFolder, string fileName) {
 			return true;
 		}
 		catch (filesystem_error const& e) {
-			cout << endl << "Error: " << e.what() << endl;
+			cout << endl << "Error:\t" << e.what() << endl;
 		}
 	}
 	else {
@@ -209,7 +217,7 @@ bool txtFileCheck(path fileFolder, string fileName) {
 			return true;
 		}
 		catch (filesystem_error const& e) {
-			cout << endl << "Error: " << e.what() << endl;
+			cout << endl << "Error:\t" << e.what() << endl;
 		}
 	}
 
@@ -219,6 +227,12 @@ bool txtFileCheck(path fileFolder, string fileName) {
 	return false;
 }
 
+/// <summary>
+/// Function to ask the user what filter to use, and returns the python modulename.
+/// </summary>
+/// <param name="filters"></param>
+/// <param name="filePath"></param>
+/// <returns>Chosen Python filter</returns>
 string askUserWhatFilter(vector<string> filters, path filePath) {
 	int ID;
 	
@@ -234,7 +248,7 @@ string askUserWhatFilter(vector<string> filters, path filePath) {
 	while (!(cin >> ID)) { // Make sure the user can only input numbers.
 		cin.clear();
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		cout << "Invalid input.  Try again: ";
+		cout << "Invalid input. Try again: ";
 	}
 	cin.ignore();
 
@@ -248,5 +262,5 @@ string askUserWhatFilter(vector<string> filters, path filePath) {
 
 		return temp;
 	}
-	return NULL;
+	return "null";
 }

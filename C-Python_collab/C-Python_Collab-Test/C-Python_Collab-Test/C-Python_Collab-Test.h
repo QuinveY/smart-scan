@@ -37,5 +37,10 @@ bool folderCheck(path folderPath);
 /// false when failed</returns>
 bool txtFileCheck(path fileFolder, string fileName);
 
-
+/// <summary>
+/// Function to ask the user what filter to use, and returns the python modulename.
+/// </summary>
+/// <param name="filters"></param>
+/// <param name="filePath"></param>
+/// <returns>Chosen Python filter</returns>
 string askUserWhatFilter(vector<string> filters, path filePath);

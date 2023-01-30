@@ -58,6 +58,7 @@ int main() {
     PyRun_SimpleString("import sys\n");
    
     PyRun_SimpleString("print(sys.executable)\n");
+    PyRun_SimpleString("print(sys.path)\n");
     	
 	Py_Finalize();
 
