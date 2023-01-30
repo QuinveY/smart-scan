@@ -241,7 +241,7 @@ const int SmartScanService::NumAttachedSensors(bool includeRef) const {
 }
 
 int SmartScanService::NumOfScans(void) {
-	return this->scans.size();
+	return (int)this->scans.size();
 }
 
 void SmartScanService::ExportCSV(const std::string filename, int scanId, const bool raw) {

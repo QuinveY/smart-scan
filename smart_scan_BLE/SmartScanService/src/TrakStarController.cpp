@@ -137,7 +137,7 @@ const int TrakStarController::NumAttachedBoards() const
 
 const int TrakStarController::NumAttachedTransmitters() const
 {
-	return pXmtr.size();
+	return (const int)pXmtr.size();
 }
 
 const int TrakStarController::NumAttachedSensors() const
@@ -322,7 +322,7 @@ Point3 TrakStarController::GetRecordFromFile(int sensorId)
 		}
 
 		//parse the number after that comma:
-		float f = std::atof(found);
+		double f = std::atof(found);
 
 		//delete the number from the line
 		if (c) {
@@ -411,7 +411,7 @@ void TrakStarController::ErrorHandler(int error)
 	while (error != BIRD_ERROR_SUCCESS)
 	{
 		error = GetErrorText(error, pBuffer, sizeof(buffer), SIMPLE_MESSAGE);
-		numberBytes = strlen(buffer);
+		numberBytes = (int)strlen(buffer);
 
 		//printf("%s", buffer);
 		throw ex_trakStar(buffer, __func__, __FILE__);
@@ -427,6 +427,6 @@ const std::string TrakStarController::GetErrorString(int error)
 	{
 		error = GetErrorText(error, buffer, sizeof(buffer), SIMPLE_MESSAGE);
 		errorString = buffer;
-		return errorString;
 	}
+	return errorString;
 }

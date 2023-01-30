@@ -9,6 +9,7 @@ set(SOURCES ${S_files}/CSVExport.cpp
             ${S_files}/SmartScanService.cpp
             ${S_files}/TrakStarController.cpp
             ${S_files}/Trigger.cpp 
+            ${S_files}/BLEController.cpp 
 			${H_files}/DirDef.h
             ${H_files}/ATC3DG.h
             ${H_files}/CSVExport.h
@@ -20,8 +21,11 @@ set(SOURCES ${S_files}/CSVExport.cpp
             #${H_files}/SmartScanConfig.h #Included in the main project
             ${H_files}/TrakStarController.h
             ${H_files}/SmartScanService.h
-            ${H_files}/Trigger.h)
-			
-		 
+            ${H_files}/Trigger.h
+            ${H_files}/BLEController.h)
+
+set(simpleble 			${CMAKE_CURRENT_SOURCE_DIR}/../simpleble_install/simpleble)
+add_subdirectory(${simpleble}	  ${CMAKE_CURRENT_BINARY_DIR}/../simpleble)
 
 add_library(SmartScanService STATIC  ${SOURCES})	
+target_link_libraries(SmartScanService PRIVATE simpleble::simpleble)    

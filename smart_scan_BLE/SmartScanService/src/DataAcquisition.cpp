@@ -194,9 +194,9 @@ const int DataAcq::NumAttachedSensors(bool includeRef) const
 {
 	// Add + 1 since the reference sensor is removed from the sensor list.
 	if (includeRef && refSensorPort > -1) {
-		return mPortNumBuff.size() + 1;
+		return (const int)mPortNumBuff.size() + 1;
 	}
-	return mPortNumBuff.size();
+	return (const int)mPortNumBuff.size();
 } 
 
 const std::vector<int> DataAcq::GetSerialNumbers(void) {

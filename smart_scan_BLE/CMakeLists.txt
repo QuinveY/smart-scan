@@ -1,8 +1,8 @@
 #Cmake basic configuration
 cmake_minimum_required(VERSION 3.4)#For best result, force cmake to use version 3.4 or above.
 project(smart-scan)# This is what your .sln file will be called.
-
-
+set(PLATFORM_WIN32_MSVC_TOOLSET v142 CACHE STRING "MSVC Platform toolset" FORCE)
+set(PLATFORM_SUFFIX "-v142" CACHE STRING "" FORCE)
 
 #Basic Compiler options for visual studio, you can also change these in the configuration settings of the project
 set(CMAKE_CXX_STANDARD 17)
@@ -13,15 +13,12 @@ set(smartscan_cli       ${CMAKE_CURRENT_SOURCE_DIR}/SmartScanCli)
 set(smartscan_lib       ${CMAKE_CURRENT_SOURCE_DIR}/Lib)
 set(smartscan_build     ${CMAKE_CURRENT_SOURCE_DIR}/Build)
 set(smartscan_service   ${CMAKE_CURRENT_SOURCE_DIR}/SmartScanService)
-set(simpleble 			${CMAKE_CURRENT_SOURCE_DIR}/simpleble_install/simpleble)
 
 ##Sources for the main files.
 set(smartscan_main 	    ${CMAKE_CURRENT_SOURCE_DIR}/SmartScanCli/SmartScanCLI.cpp
                         ${CMAKE_CURRENT_SOURCE_DIR}/SmartScanCli/SmartScanConfig.h)
 		
-
 #Add the necessary subdirectories so that the individual libraries run their little CMake Scripts.
-add_subdirectory(${simpleble}	  ${CMAKE_CURRENT_BINARY_DIR}/simpleble)
 add_subdirectory(SmartScanService ${CMAKE_CURRENT_BINARY_DIR}/SmartScanService)
 add_subdirectory(Build 		      ${CMAKE_CURRENT_BINARY_DIR}/ATC3DG64)
 
@@ -44,8 +41,7 @@ target_include_directories(main PRIVATE ${smartscan_lib})
 
 #Link the necessary libraries so that main can utilize the BLE, SmartScanService and AT libraries and functions.
 target_link_libraries(main PRIVATE ATC3DG64)
-target_link_libraries(main PRIVATE SmartScanService) 
-target_link_libraries(main PRIVATE simpleble::simpleble)           
+target_link_libraries(main PRIVATE SmartScanService)        
 						 
 #Installable Setup
 install(TARGETS ATC3DG64 RUNTIME DESTINATION bin)

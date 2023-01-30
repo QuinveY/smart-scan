@@ -90,17 +90,17 @@ void Scan::CopyOutputBuffer(std::vector<Point3>* buffer) const
 
 const int Scan::NumUsedSensors() const
 {
-	return mConfig.inBuff->size();
+	return (const int)mConfig.inBuff->size();
 }
 
 const int Scan::NumRefPoints() const
 {
-	return mConfig.refPoints.size();
+	return (const int)mConfig.refPoints.size();
 }
 
 const int Scan::GetFilteringPrecision() const
 {
-	return mConfig.filteringPrecision;
+	return (const int) mConfig.filteringPrecision;
 }
 
 const int Scan::GetStopAtSample() const
@@ -256,7 +256,7 @@ void Scan::OutlierFiltering(void) {
 
 int Scan::CalcNearestRef(Point3* point) {
 	int index = 0;
-	float radius = DBL_MAX, temp = 0; // Set radius to be an irrealistic value.
+	double radius = DBL_MAX, temp = 0; // Set radius to be an irrealistic value.
 
 	// Loop through all the reference points.
 	for (int i = 0; i < mConfig.refPoints.size(); i++) {
