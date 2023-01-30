@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
@@ -13,9 +13,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{14DB988F-4553-3AD7-88EF-AD3F441783B1}</ProjectGuid>
+    <ProjectGuid>{FAD2B881-12F9-3818-8369-9486DABE5499}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -48,11 +48,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeLists.txt">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Github/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild -BD:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild --check-stamp-file D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Github/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild -BD:/Github/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild --check-stamp-file D:/Github/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-subbuild/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -60,22 +60,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\3.25.0\CMakeSystem.cmake;D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\fmt-populate-prefix\tmp\fmt-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\3.25.2\CMakeSystem.cmake;D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\fmt-populate-prefix\tmp\fmt-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\ZERO_CHECK.vcxproj">
-      <Project>{0198FFD5-F5B8-37A8-A690-6C1B45E20736}</Project>
+    <ProjectReference Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\ZERO_CHECK.vcxproj">
+      <Project>{6A19E555-E17B-3D02-8FD5-92ECD90508CE}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\fmt-populate.vcxproj">
-      <Project>{E5570A2A-C880-3485-BF04-9E34FAAFDB83}</Project>
+    <ProjectReference Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\fmt-populate.vcxproj">
+      <Project>{592C3DE8-BC56-32F5-A0D6-F9E3888E3DC1}</Project>
       <Name>fmt-populate</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

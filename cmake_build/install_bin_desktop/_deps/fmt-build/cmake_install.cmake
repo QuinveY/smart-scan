@@ -1,4 +1,4 @@
-# Install script for directory: D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-src
+# Install script for directory: D:/Github/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

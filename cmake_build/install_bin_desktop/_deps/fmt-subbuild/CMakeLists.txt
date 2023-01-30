@@ -1,7 +1,7 @@
 # Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
 # file Copyright.txt or https://cmake.org/licensing for details.
 
-cmake_minimum_required(VERSION 3.25.0)
+cmake_minimum_required(VERSION 3.25.2)
 
 # We name the project and the target for the ExternalProject_Add() call
 # to something that will highlight to the user what we are working on if
@@ -13,17 +13,17 @@ project(fmt-populate NONE)
 # Pass through things we've already detected in the main project to avoid
 # paying the cost of redetecting them again in ExternalProject_Add()
 set(GIT_EXECUTABLE [==[C:/Program Files/Git/cmd/git.exe]==])
-set(GIT_VERSION_STRING [==[2.37.3.windows.1]==])
+set(GIT_VERSION_STRING [==[2.39.1.windows.1]==])
 set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
-  [==[C:/Program Files/Git/cmd/git.exe;2.37.3.windows.1]==]
+  [==[C:/Program Files/Git/cmd/git.exe;2.39.1.windows.1]==]
 )
 
 
 include(ExternalProject)
 ExternalProject_Add(fmt-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/fmtlib/fmt.git" "GIT_TAG" "b6f4ceaed0a0a24ccf575fab6c56dd50ccf6f1a9"
-                    SOURCE_DIR          "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-src"
-                    BINARY_DIR          "D:/GitHub/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-build"
+                    SOURCE_DIR          "D:/Github/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-src"
+                    BINARY_DIR          "D:/Github/smart-scan/cmake_build/install_bin_desktop/_deps/fmt-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

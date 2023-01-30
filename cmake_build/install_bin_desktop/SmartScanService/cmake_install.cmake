@@ -1,4 +1,4 @@
-# Install script for directory: D:/GitHub/smart-scan/smart_scan_BLE/SmartScanService
+# Install script for directory: D:/Github/smart-scan/smart_scan_BLE/SmartScanService
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

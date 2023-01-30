@@ -15,10 +15,10 @@ C:/Program Files/CMake/share/cmake-3.25/Modules/Internal/CheckCompilerFlag.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/Internal/CheckFlagCommonConfig.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/Internal/CheckSourceCompiles.cmake
 C:/Program Files/CMake/share/cmake-3.25/Modules/exportheader.cmake.in
-D:/GitHub/smart-scan/smart_scan_BLE/simpleble_install/VERSION
-D:/GitHub/smart-scan/smart_scan_BLE/simpleble_install/cmake/epilogue.cmake
-D:/GitHub/smart-scan/smart_scan_BLE/simpleble_install/cmake/find/Findfmt.cmake
-D:/GitHub/smart-scan/smart_scan_BLE/simpleble_install/cmake/parse_version.cmake
-D:/GitHub/smart-scan/smart_scan_BLE/simpleble_install/cmake/prelude.cmake
-D:/GitHub/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt
-D:/GitHub/smart-scan/smart_scan_BLE/simpleble_install/simpleble/cmake/simpleble.pc.in
+D:/Github/smart-scan/smart_scan_BLE/simpleble_install/VERSION
+D:/Github/smart-scan/smart_scan_BLE/simpleble_install/cmake/epilogue.cmake
+D:/Github/smart-scan/smart_scan_BLE/simpleble_install/cmake/find/Findfmt.cmake
+D:/Github/smart-scan/smart_scan_BLE/simpleble_install/cmake/parse_version.cmake
+D:/Github/smart-scan/smart_scan_BLE/simpleble_install/cmake/prelude.cmake
+D:/Github/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt
+D:/Github/smart-scan/smart_scan_BLE/simpleble_install/simpleble/cmake/simpleble.pc.in

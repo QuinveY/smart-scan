@@ -18,19 +18,21 @@ set(simpleble 			${CMAKE_CURRENT_SOURCE_DIR}/simpleble_install/simpleble)
 ##Sources for the main files.
 set(smartscan_main 	    ${CMAKE_CURRENT_SOURCE_DIR}/SmartScanCli/SmartScanCLI.cpp
                         ${CMAKE_CURRENT_SOURCE_DIR}/SmartScanCli/SmartScanConfig.h)
-						
-##Copy over the .dll file needed for the ATC library cus windows hates me.
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ${smartscan_build}/ATC3DG64.DLL
-     DESTINATION ${EXECUTABLE_OUTPUT_PATH})
-file(COPY ${smartscan_build}/ATC3DG64.DLL
-     DESTINATION ${EXECUTABLE_OUTPUT_PATH}/bin)
+		
 
 #Add the necessary subdirectories so that the individual libraries run their little CMake Scripts.
 add_subdirectory(${simpleble}	  ${CMAKE_CURRENT_BINARY_DIR}/simpleble)
 add_subdirectory(SmartScanService ${CMAKE_CURRENT_BINARY_DIR}/SmartScanService)
-add_subdirectory(Build 			  ${CMAKE_CURRENT_BINARY_DIR}/Build)
+add_subdirectory(Build 		      ${CMAKE_CURRENT_BINARY_DIR}/ATC3DG64)
 
+#Copy over the .dll file needed for the ATC library cus windows hates me.
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${smartscan_build}/ATC3DG64.DLL
+     DESTINATION ${EXECUTABLE_OUTPUT_PATH})
+file(COPY ${smartscan_build}/ATC3DG64.DLL
+     DESTINATION ${EXECUTABLE_OUTPUT_PATH}/ATC3DG64/Debug)
+file(COPY ${smartscan_lib}/ATC3DG64.lib
+     DESTINATION ${EXECUTABLE_OUTPUT_PATH}/ATC3DG64/Debug)
 #Create the main project thats gonna show up on your smart-scan.sln.
 add_executable(main ${smartscan_main})
 #Basic Include directories to avoid dependency errors/missing files.
@@ -41,7 +43,14 @@ target_include_directories(main PRIVATE ${smartscan_lib})
 
 
 #Link the necessary libraries so that main can utilize the BLE, SmartScanService and AT libraries and functions.
-target_link_libraries(main PRIVATE ${smartscan_lib}/ATC3DG64.lib)
+target_link_libraries(main PRIVATE ATC3DG64)
 target_link_libraries(main PRIVATE SmartScanService) 
 target_link_libraries(main PRIVATE simpleble::simpleble)           
 						 
+#Installable Setup
+install(TARGETS ATC3DG64 RUNTIME DESTINATION bin)
+install(TARGETS SmartScanService RUNTIME DESTINATION bin)
+install(TARGETS main RUNTIME DESTINATION bin)
+include(InstallRequiredSystemLibraries)
+set(CPACK_SOURCE_GENERATOR "TGZ")
+include(CPack)

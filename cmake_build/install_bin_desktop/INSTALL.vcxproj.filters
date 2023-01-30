@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\CMakeFiles\b693a6bb8fa05438f2c6338fdbc4e625\INSTALL_force.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\CMakeFiles\a19df5a382e95707918fb48268255fcb\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{E8252D4A-95B0-3DFE-B8B2-2F300F3A7F3E}</UniqueIdentifier>
+      <UniqueIdentifier>{6621AD39-22E7-31D7-88D6-578123BE51DB}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

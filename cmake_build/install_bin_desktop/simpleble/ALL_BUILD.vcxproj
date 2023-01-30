@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
@@ -25,9 +25,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{6079CF1C-90D7-3149-ABE9-763C199E2A2F}</ProjectGuid>
+    <ProjectGuid>{EE19F7A6-5CD2-3666-A3A3-28A9B10ACACE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -36,22 +36,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -108,11 +108,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\simpleble\CMakeLists.txt">
+    <CustomBuild Include="D:\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/GitHub/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Github/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitHub/smart-scan/smart_scan_BLE -BD:/GitHub/smart-scan/cmake_build/install_bin_desktop --check-stamp-file D:/GitHub/smart-scan/cmake_build/install_bin_desktop/simpleble/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Github/smart-scan/smart_scan_BLE -BD:/Github/smart-scan/cmake_build/install_bin_desktop --check-stamp-file D:/Github/smart-scan/cmake_build/install_bin_desktop/simpleble/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -120,12 +120,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\VERSION;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\epilogue.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\find\Findfmt.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\parse_version.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\prelude.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\GitHub\smart-scan\cmake_build\install_bin_desktop\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\VERSION;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\epilogue.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\find\Findfmt.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\parse_version.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\prelude.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Github\smart-scan\cmake_build\install_bin_desktop\simpleble\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/GitHub/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Github/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitHub/smart-scan/smart_scan_BLE -BD:/GitHub/smart-scan/cmake_build/install_bin_desktop --check-stamp-file D:/GitHub/smart-scan/cmake_build/install_bin_desktop/simpleble/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Github/smart-scan/smart_scan_BLE -BD:/Github/smart-scan/cmake_build/install_bin_desktop --check-stamp-file D:/Github/smart-scan/cmake_build/install_bin_desktop/simpleble/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,12 +133,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\VERSION;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\epilogue.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\find\Findfmt.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\parse_version.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\prelude.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\GitHub\smart-scan\cmake_build\install_bin_desktop\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\VERSION;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\epilogue.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\find\Findfmt.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\parse_version.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\prelude.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Github\smart-scan\cmake_build\install_bin_desktop\simpleble\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/GitHub/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Github/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitHub/smart-scan/smart_scan_BLE -BD:/GitHub/smart-scan/cmake_build/install_bin_desktop --check-stamp-file D:/GitHub/smart-scan/cmake_build/install_bin_desktop/simpleble/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Github/smart-scan/smart_scan_BLE -BD:/Github/smart-scan/cmake_build/install_bin_desktop --check-stamp-file D:/Github/smart-scan/cmake_build/install_bin_desktop/simpleble/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -146,12 +146,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\VERSION;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\epilogue.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\find\Findfmt.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\parse_version.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\prelude.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\GitHub\smart-scan\cmake_build\install_bin_desktop\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\VERSION;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\epilogue.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\find\Findfmt.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\parse_version.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\prelude.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Github\smart-scan\cmake_build\install_bin_desktop\simpleble\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/GitHub/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Github/smart-scan/smart_scan_BLE/simpleble_install/simpleble/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitHub/smart-scan/smart_scan_BLE -BD:/GitHub/smart-scan/cmake_build/install_bin_desktop --check-stamp-file D:/GitHub/smart-scan/cmake_build/install_bin_desktop/simpleble/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Github/smart-scan/smart_scan_BLE -BD:/Github/smart-scan/cmake_build/install_bin_desktop --check-stamp-file D:/Github/smart-scan/cmake_build/install_bin_desktop/simpleble/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,30 +159,30 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\VERSION;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\epilogue.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\find\Findfmt.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\parse_version.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\cmake\prelude.cmake;D:\GitHub\smart-scan\smart_scan_BLE\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\GitHub\smart-scan\cmake_build\install_bin_desktop\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\exportheader.cmake.in;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\VERSION;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\epilogue.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\find\Findfmt.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\parse_version.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\cmake\prelude.cmake;D:\Github\smart-scan\smart_scan_BLE\simpleble_install\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Github\smart-scan\cmake_build\install_bin_desktop\simpleble\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\ZERO_CHECK.vcxproj">
-      <Project>{FCAED9F1-D702-30A1-8D7A-7948F3DB6249}</Project>
+    <ProjectReference Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\ZERO_CHECK.vcxproj">
+      <Project>{DFBF63C6-978E-3128-8C49-114D73C563A8}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-build\fmt.vcxproj">
-      <Project>{46C8B555-E07F-35C6-A984-47AD34EC6B37}</Project>
+    <ProjectReference Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-build\fmt.vcxproj">
+      <Project>{F817D4CF-DD47-3018-A370-543AECC0BDC9}</Project>
       <Name>fmt</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\simpleble\simpleble.vcxproj">
-      <Project>{1FE2A34B-5621-389C-B527-5C2D2ABF6940}</Project>
+    <ProjectReference Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\simpleble\simpleble.vcxproj">
+      <Project>{CE13B7E7-E07F-3B27-B539-A1B1FA47BD57}</Project>
       <Name>simpleble</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\simpleble\simpleble-c.vcxproj">
-      <Project>{45A025C1-6E5F-33F9-9C41-F0B0362BEA81}</Project>
+    <ProjectReference Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\simpleble\simpleble-c.vcxproj">
+      <Project>{8DC23478-53FF-3B54-84BD-077A86BA2332}</Project>
       <Name>simpleble-c</Name>
     </ProjectReference>
   </ItemGroup>

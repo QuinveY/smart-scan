@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\384616bd6c8deb807044cae6f4e4a7a3\fmt-populate-mkdir.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\3b8f66dac2d6159ef4b788f4722cad46\fmt-populate-mkdir.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\384616bd6c8deb807044cae6f4e4a7a3\fmt-populate-download.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\3b8f66dac2d6159ef4b788f4722cad46\fmt-populate-download.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\384616bd6c8deb807044cae6f4e4a7a3\fmt-populate-update.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\3b8f66dac2d6159ef4b788f4722cad46\fmt-populate-update.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\384616bd6c8deb807044cae6f4e4a7a3\fmt-populate-patch.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\3b8f66dac2d6159ef4b788f4722cad46\fmt-populate-patch.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\384616bd6c8deb807044cae6f4e4a7a3\fmt-populate-configure.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\3b8f66dac2d6159ef4b788f4722cad46\fmt-populate-configure.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\384616bd6c8deb807044cae6f4e4a7a3\fmt-populate-build.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\3b8f66dac2d6159ef4b788f4722cad46\fmt-populate-build.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\384616bd6c8deb807044cae6f4e4a7a3\fmt-populate-install.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\3b8f66dac2d6159ef4b788f4722cad46\fmt-populate-install.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\384616bd6c8deb807044cae6f4e4a7a3\fmt-populate-test.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\3b8f66dac2d6159ef4b788f4722cad46\fmt-populate-test.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\340415c1aa929d8a718cbac3e6fc0f1d\fmt-populate-complete.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\aa85ddc9b01532e522bfbdd70b2ea069\fmt-populate-complete.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\2518463b721f41822799172924943f5b\fmt-populate.rule">
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\1bf589301fc6d23a8f8935c3296f908f\fmt-populate.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeLists.txt" />
+    <CustomBuild Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\GitHub\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\fmt-populate" />
+    <None Include="D:\Github\smart-scan\cmake_build\install_bin_desktop\_deps\fmt-subbuild\CMakeFiles\fmt-populate" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{773413EB-E990-3195-AC63-7D07E24074AE}</UniqueIdentifier>
+      <UniqueIdentifier>{7A78C9B7-5041-3625-B623-84C24F4E532C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
