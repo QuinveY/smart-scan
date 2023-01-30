@@ -36,3 +36,6 @@ bool folderCheck(path folderPath);
 /// <returns>true when succeeded
 /// false when failed</returns>
 bool txtFileCheck(path fileFolder, string fileName);
+
+
+string askUserWhatFilter(vector<string> filters, path filePath);

@@ -17,11 +17,8 @@ int main() {
 
 	// Check for files in the pluginfolders
 	vector<string> fileList = pluginFilesList(pluginFolder, "files"); 
-	
+
 	//cout << argv << endl << endl;
-
-
-	
 
 	try { // always check for Python_exceptions
 		//cout << "Simple Python output:" << endl;
@@ -46,13 +43,23 @@ int main() {
 		
 		cout << endl;
 
-		const std::vector<std::vector<Point3>>* inBuff;
-
+		std::vector<std::vector<Point3>> mRawBuff;
+		// Initialize raw data buffer.
+		for (int i = 0; i < 3; i++) {
+			mRawBuff.push_back(std::vector<Point3>());
+		}
 
 		// Calling a python function
 		cout << "Python file function output:" << endl;
-		vector<string> pythonArgs = { "python_cpp_collab", "multiply", "2", "3" };		
+		//vector<string> pythonArgs = { "python_cpp_collab", "multiply", "2", "3" };
 
+		vector<string> pythonArgs;
+		
+		pythonArgs.push_back(askUserWhatFilter(fileList, pluginFolder));
+
+		pythonArgs.push_back("ballExploder");
+		//pythonArgs.push_back();
+			
 		int executed = pyHandler(pythonArgs, pluginFolder);
 		if (executed != 0) {
 			cout << "Python had an error executing, error code: " << executed << endl;
@@ -212,7 +219,7 @@ bool txtFileCheck(path fileFolder, string fileName) {
 	return false;
 }
 
-string askUserWhatFilter(vector<string> filters) {
+string askUserWhatFilter(vector<string> filters, path filePath) {
 	int ID;
 	
 	// Print all found filenames
@@ -231,5 +238,15 @@ string askUserWhatFilter(vector<string> filters) {
 	}
 	cin.ignore();
 
-	return filters[ID];
+	if (ID < filters.size()) {
+		string temp = filters[ID];
+		
+		filePath += path::preferred_separator; // make sure the filepath is complete
+		
+		temp.erase(temp.find(".py"));
+		temp = temp.substr(filePath.string().length()); // use the modulename only
+
+		return temp;
+	}
+	return NULL;
 }

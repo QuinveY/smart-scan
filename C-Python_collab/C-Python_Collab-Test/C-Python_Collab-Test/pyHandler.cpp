@@ -1,7 +1,7 @@
 #include "pyHandler.h"
 
 // Uncomment for debug mode
-#define DEBUG
+//#define DEBUG
 
 int pyHandler(vector<string> pythonArgs, path pluginFolder) {
 	PyObject* pName, * pModule, * pFunc;
