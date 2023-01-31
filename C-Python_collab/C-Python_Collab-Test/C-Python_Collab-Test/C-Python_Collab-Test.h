@@ -11,14 +11,11 @@ using namespace filesystem;
 using namespace SmartScan;
 
 
-
 /// <summary>
 /// Lists all files in the directory
 /// </summary>
-/// <param name="pluginFolder">Directory location to look for plugin files</param>
-/// <param name="fileName">Name of the text file to save the list into</param>
-vector<string> pluginFilesList(path pluginFolder, string fileName);
-
+/// <param name="fileLpluginFolderocation">Directory location to look for plugin files</param>
+vector<string> pluginFilesList(path pluginFolder);
 
 /// <summary>
 /// Checks if the folder exists, if not it creates it

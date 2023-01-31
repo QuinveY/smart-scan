@@ -18,13 +18,13 @@
     <ClCompile Include="C-Python_Collab-Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pyHandler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\pyhelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Point3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pyHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,13 +35,13 @@
     <ClInclude Include="C-Python_Collab-Test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pyHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="inc\Point3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="inc\include\Python.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\pyHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

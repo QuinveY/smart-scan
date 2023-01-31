@@ -15,7 +15,7 @@ int main() {
 	pluginFolder /= "plugins";
 
 	// Check for files in the pluginfolders
-	vector<string> fileList = pluginFilesList(pluginFolder, "files"); 
+	vector<string> fileList = pluginFilesList(pluginFolder); 
 
 	//cout << argv << endl << endl;
 
@@ -87,48 +87,32 @@ int main() {
 /// Lists all files in the directory
 /// </summary>
 /// <param name="fileLpluginFolderocation">Directory location to look for plugin files</param>
-/// <param name="fileName">Name of the text file to save the list into</param>
-vector<string> pluginFilesList(path pluginFolder, string fileName) {
-	//ofstream file;
-	
-	// Append .txt as filetype
-	//fileName += ".txt";
-
+vector<string> pluginFilesList(path pluginFolder) {
 	vector<string> filesFound;
 
 	// Check if folder exists
 	folderCheck(pluginFolder);
 
-	// Check if file exists
-	// txtFileCheck(pluginFolder, fileName);
-
 	// List all files from the plugin folder in the file
 	try {
-		// Create a full path string
-		//path filePath = pluginFolder / fileName;
-
-		// file.open(filePath);
-
 		for (const auto& entry : directory_iterator(pluginFolder)) {	// loop through all files in this folder
 			#ifdef DEBUG
-				cout << "Found file:\t" << entry.path() << endl;
+				cout << "Found:\t" << entry.path() << endl;
 			#endif
 			
 			if (entry.path().extension() == ".py") {					// check for python files
 				#ifdef DEBUG
-					cout << "Saving file:\t" << entry.path() << endl;
+					cout << "Saving:\t" << entry.path() << endl;
 				#endif
 
 				filesFound.push_back(entry.path().string());
-				//file << entry.path() << endl;							// save the found file
 			}
 			if (entry.path().extension() == ".r") {						// check for R files
 				#ifdef DEBUG
-					cout << "Saving file:\t" << entry.path() << endl;
+					cout << "Saving:\t" << entry.path() << endl;
 				#endif
 
 				filesFound.push_back(entry.path().string());
-				//file << entry.path() << endl;							// save the found file
 			}
 		}
 
@@ -141,7 +125,6 @@ vector<string> pluginFilesList(path pluginFolder, string fileName) {
 		#endif
 
 		return filesFound;
-		//file.close();
 	}
 	catch (filesystem_error const& e) {
 		cout << endl << "Error:\t" << e.what() << endl;
