@@ -4,6 +4,7 @@ message("-- Linking SmartScanService")
 set(H_files 			${CMAKE_CURRENT_SOURCE_DIR}/inc)
 set(S_files 			${CMAKE_CURRENT_SOURCE_DIR}/src)
 
+#If you ever add new files for your project, make sure to include them here, so that cmake can take this into account when building the new .lib file when you run it
 set(SOURCES ${S_files}/CSVExport.cpp
             ${S_files}/DataAcquisition.cpp
             ${S_files}/Point3.cpp
@@ -26,8 +27,8 @@ set(SOURCES ${S_files}/CSVExport.cpp
 			
 		 
 
-set(simpleble 			${CMAKE_CURRENT_SOURCE_DIR}/../simpleble_install/simpleble)
-add_subdirectory(${simpleble}	  ${CMAKE_CURRENT_BINARY_DIR}/../simpleble)
+set(simpleble 	${CMAKE_CURRENT_SOURCE_DIR}/../simpleble_install/simpleble)
+add_subdirectory(${simpleble}	  ${CMAKE_CURRENT_BINARY_DIR}/../simpleble)#Looks for the CMakelists.txt file for simpleble
 
-add_library(SmartScanService STATIC  ${SOURCES})	
-target_link_libraries(SmartScanService PRIVATE simpleble::simpleble)    
+add_library(SmartScanService STATIC  ${SOURCES})#This line uses the file list above and compiles it into a library, that later is linked with SmartScanService and the main SmartScan Project.
+target_link_libraries(SmartScanService PRIVATE simpleble::simpleble)    #SmartScanService also uses the ble library, so the link is done between the two here aswell.	
