@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src_c\simpleble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src_c\adapter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src_c\peripheral.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\smart_scan_BLE\simpleble_install\simpleble\src_c\logging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\smart_scan_BLE\simpleble_install\simpleble\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C083D74F-13CB-393A-966C-2DC88409C566}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

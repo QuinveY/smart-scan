@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\src\format.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\src\os.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\args.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\chrono.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\compile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\format.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\format-inl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\locale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\os.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\ostream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\printf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\ranges.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\include\fmt\xchar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\README.rst" />
+    <None Include="C:\Users\Arjan\Nextcloud\Elektrotechniek\S7\SmartScan porject\smart-scan-git\smart-scan\cmake_build\_deps\fmt-src\ChangeLog.rst" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{526B20AD-B7DF-37B5-9469-C201AEFACEE3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C083D74F-13CB-393A-966C-2DC88409C566}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

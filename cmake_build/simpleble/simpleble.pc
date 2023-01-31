@@ -1,0 +1,11 @@
+prefix=C:/Program Files (x86)/smart-scan
+exec_prefix=C:/Program Files (x86)/smart-scan
+libdir=C:/Program Files (x86)/smart-scan/lib
+includedir=C:/Program Files (x86)/smart-scan/include
+
+Name: SimpleBLE
+Description: "The ultimate fully-fledged cross-platform library for Bluetooth Low Energy (BLE)."
+Version: 0.6.0
+Libs: -L${libdir} -lsimpleble 
+Cflags: -I${includedir}
+Conflicts:
