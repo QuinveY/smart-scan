@@ -45,7 +45,7 @@ std::optional<std::size_t> Utils::getUserInputInt(const std::string& line, std::
 
 std::optional<SimpleBLE::Adapter> Utils::getAdapter() {
     if (!SimpleBLE::Adapter::bluetooth_enabled()) {
-        std::cout << "Bluetooth is not enabled!" << std::endl;
+        std::cout << "\t\t\tBluetooth is not enabled!" << std::endl;
         return {};
     }
 
@@ -53,25 +53,25 @@ std::optional<SimpleBLE::Adapter> Utils::getAdapter() {
 
     // no adapter found
     if (adapter_list.empty()) {
-        std::cerr << "No adapter was found." << std::endl;
+        std::cerr << "\t\t\tNo adapter was found." << std::endl;
         return {};
     }
 
     // only one found, returning directly
     if (adapter_list.size() == 1) {
         auto adapter = adapter_list.at(0);
-        std::cout << "Using adapter: " << adapter.identifier() << " [" << adapter.address() << "]" << std::endl;
+        std::cout << "\t\t\tUsing adapter: " << adapter.identifier() << " [" << adapter.address() << "]" << std::endl;
         return adapter;
     }
 
     // multiple adapters found, ask user to select one
-    std::cout << "Available adapters:" << std::endl;
+    std::cout << "\t\t\tAvailable adapters:" << std::endl;
     int i = 0;
     for (auto& adapter : adapter_list) {
-        std::cout << "[" << i++ << "] " << adapter.identifier() << " [" << adapter.address() << "]" << std::endl;
+        std::cout << "\t\t\t[" << i++ << "] " << adapter.identifier() << " [" << adapter.address() << "]" << std::endl;
     }
 
-    auto adapter_selection = Utils::getUserInputInt("Select an adapter", adapter_list.size() - 1);
+    auto adapter_selection = Utils::getUserInputInt("\t\t\tSelect an adapter", adapter_list.size() - 1);
 
     if (!adapter_selection.has_value()) {
         return {};

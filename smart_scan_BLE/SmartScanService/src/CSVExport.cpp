@@ -15,12 +15,13 @@ void CSVExport::ExportPoint3(const std::vector<Point3>* data, const std::string 
 	csvFile.open(filename);
 
 	// Print the amount of rows on the top row.
+	csvFile << "sep=," << std::endl;
 	csvFile << data->size() << std::endl;
 
 	// Loop through and Write data unless data is empty.
 	if (!data->empty())	{
 		for (int i = 0; i < data->size(); i++) {
-			csvFile << data->at(i).time << "," << data->at(i).x << "," << data->at(i).y << "," << data->at(i).z << "," << data->at(i).r.x << "," << data->at(i).r.y << "," << data->at(i).r.z << "," << data->at(i).quality << "," << (int)data->at(i).buttonState << std::endl;
+			csvFile << data->at(i).time << "," << data->at(i).x << "," << data->at(i).y << "," << data->at(i).z << "," << data->at(i).pressure << "," << data->at(i).r.x << "," << data->at(i).r.y << "," << data->at(i).r.z << "," << data->at(i).quality << "," << (int)data->at(i).buttonState << std::endl;
 		}
 	}
 	else {
@@ -35,12 +36,12 @@ void CSVExport::ExportPoint3Cloud(const std::vector<Point3>* data, const std::st
 
 	// Print the column names on the top row.
 	csvFile << "sep=," << std::endl;
-	csvFile << 'X' << ',' << 'Y' << ',' << 'Z' << std::endl;
+	csvFile << "X,Y,Z,Pressure" << std::endl;
 
 	// Loop through and Write data unless data is empty.
 	if (!data->empty())	{
 		for (int i = 0; i < data->size(); i++) {
-			csvFile << data->at(i).x << "," << data->at(i).y << "," << data->at(i).z << std::endl;
+			csvFile << data->at(i).x << "," << data->at(i).y << "," << data->at(i).z << "," << data->at(i).pressure << std::endl;
 		}
 	}
 	else {
@@ -54,13 +55,14 @@ void CSVExport::ExportPoint3Raw(const std::vector<std::vector<Point3>>* data, co
 	csvFile.open(filename);
 
 	// Print the amount of rows and the amount of sensors used (excluding reference sensor) on the top row.
+	csvFile << "sep=," << std::endl;
 	csvFile << data->at(0).size() << "," << data->size() << std::endl;
 
 	// Loop through and Write data unless data is empty.
 	if (!data->at(0).empty()) {
 		for (int i = 0; i < data->at(0).size(); i++) {
 			for (int j = 0; j < data->size(); j++) {
-				csvFile << data->at(j).at(i).time << "," << data->at(j).at(i).x << "," << data->at(j).at(i).y << "," << data->at(j).at(i).z << "," << data->at(j).at(i).r.x << "," << data->at(j).at(i).r.y << "," << data->at(j).at(i).r.z << "," << data->at(j).at(i).quality << "," << (int)data->at(j).at(i).buttonState << ",";
+				csvFile << data->at(j).at(i).time << "," << data->at(j).at(i).x << "," << data->at(j).at(i).y << "," << data->at(j).at(i).z << "," << data->at(j).at(i).pressure << ","  << data->at(j).at(i).r.x << "," << data->at(j).at(i).r.y << "," << data->at(j).at(i).r.z << "," << data->at(j).at(i).quality << "," << (int)data->at(j).at(i).buttonState << ",";
 			}
 			csvFile << std::endl;
 		}
@@ -77,13 +79,14 @@ void CSVExport::ExportPoint3RawCloud(const std::vector<std::vector<Point3>>* dat
 	csvFile.open(filename);
 
 	// Print the column names on the top row.
-	csvFile << 'X' << ',' << 'Y' << ',' << 'Z' << std::endl;
+	csvFile << "sep=," << std::endl;
+	csvFile << "X,Y,Z,Pressure" << std::endl;
 
 	// Loop through and Write data unless data is empty.
 	if (!data->at(0).empty()) {
 		for (int j = 0; j < data->size(); j++) {
 			for (int i = 0; i < data->at(j).size(); i++) {
-				csvFile << data->at(j).at(i).x << "," << data->at(j).at(i).y << "," << data->at(j).at(i).z << std::endl; 
+				csvFile << data->at(j).at(i).x << "," << data->at(j).at(i).y << "," << data->at(j).at(i).z << "," << data->at(j).at(i).pressure << std::endl;
 			}
 		}
 	}

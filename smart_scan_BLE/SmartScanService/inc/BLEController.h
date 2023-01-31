@@ -11,7 +11,8 @@
 // Definitions
 #define UUID_PRESSURE	"00000002-0f8e-467a-a542-98fb7a3c85d6" // Pressure result characteristic
 #define UUID_SAMPLING	"00000003-0f8e-467a-a542-98fb7a3c85d6" // Sampling speed characteristic (in ms, if 0 only on change)
-#define GLOVE_NAME		"Sendance-Gloves_Right"				   // Name for connection purposes
+#define UUID_ADV		"00001530-1212-EFDE-1523-785FEABCD123" // UUID which is advertised, used for connecting
+#define GLOVE_NAME		"Sendance-Gloves_Right"				   // Name
 #define READ_START		'['
 #define READ_TIME		';'
 #define READ_SEPERATOR	','

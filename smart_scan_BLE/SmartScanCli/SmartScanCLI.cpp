@@ -180,14 +180,13 @@ int main() {
 			if (iniFile.has_section(SECTION_BLE)) {
 				// Check if a previous mac address has been saved
 				if (!iniFile[SECTION_BLE].has_key(PARAM_BLE_MAC_ADDR)) {
-					s3.ConnectToGlove();
+					while (!s3.ConnectToGlove()) { ; }
 					iniFile[SECTION_BLE].set<string>(PARAM_BLE_MAC_ADDR, s3.ConnectedMacAddr());
 					iniFile.write(DIR_SETTINGS);
 				}
 				else {
 					// Look for the mac address to prevent connecting to the wrong glove
-					s3.ConnectToGlove(iniFile[SECTION_BLE].get<string>(PARAM_BLE_MAC_ADDR));
-
+					while (!s3.ConnectToGlove(iniFile[SECTION_BLE].get<string>(PARAM_BLE_MAC_ADDR))) { ; }
 					// Check if the saved and connected mac address are the same
 					if (strcmp(s3.ConnectedMacAddr().c_str(), iniFile[SECTION_BLE].get<string>(PARAM_BLE_MAC_ADDR).c_str()) != 0) {
 						iniFile[SECTION_BLE].set<string>(PARAM_BLE_MAC_ADDR, s3.ConnectedMacAddr());
@@ -274,18 +273,19 @@ int main() {
 		}
 
 		// Config the pressure sensors
+		// READING IS BROKEN
 		if (thumb.serial != -1) {
-			thumb.index = IndexIdentification(PARAM_BLE_THUMB_INDEX);
+			thumb.index = 1; //IndexIdentification(PARAM_BLE_THUMB_INDEX);
 			thumb.pressureOffset = calOffset.at(thumb.index);
 		}
 
 		if (index.serial != -1) {
-			index.index = IndexIdentification(PARAM_BLE_INDEX_INDEX);
+			index.index = 2; //IndexIdentification(PARAM_BLE_INDEX_INDEX);
 			index.pressureOffset = calOffset.at(index.index);
 		}
 
 		if (middle.serial != -1) {
-			middle.index = IndexIdentification(PARAM_BLE_MIDDLE_INDEX);
+			middle.index = 3; //IndexIdentification(PARAM_BLE_MIDDLE_INDEX);
 			middle.pressureOffset = calOffset.at(middle.index);
 		}
 

@@ -22,7 +22,6 @@ DataAcqConfig::DataAcqConfig(short int transmitterID, double measurementRate, do
 
 DataAcq::DataAcq() :  mTSCtrl()
 {
-
 }
 
 DataAcq::~DataAcq()
@@ -42,6 +41,7 @@ void DataAcq::Init()
 	mTSCtrl.SetReferenceFrame(mConfig.transmitterID, mConfig.frameRotations);
 	mTSCtrl.SetSensorFormat();
 
+	//pressureGloves.SetDelayInMillis(mConfig.measurementRate);
 
 	// Get sensor info from TrakStar object.
 	mPortNumBuff = mTSCtrl.GetAttachedPorts();
@@ -244,7 +244,7 @@ std::vector<int> DataAcq::ReadPressure(void) {
 	size_t stopMeas = rawData.find(READ_STOP);
 
 	// Save the time
-	vectorizedData.at(0) = atoi(rawData.substr((startMeas + 1), (timeEnd - startMeas)).c_str());
+	vectorizedData.push_back(atoi(rawData.substr((startMeas + 1), (timeEnd - startMeas)).c_str()));
 
 	// Initialize vectorization
 	size_t start = timeEnd + 2;
@@ -255,19 +255,19 @@ std::vector<int> DataAcq::ReadPressure(void) {
 	// Keep going until no more seperators can be found
 	do {
 		// Save integer at found location
-		vectorizedData.at(crntIndex) = atoi(rawData.substr(start, (stop + 1 - start)).c_str());
+		vectorizedData.push_back(atoi(rawData.substr(start, (stop + 1 - start)).c_str()));
 		
 		// Update the start index
 		start = stop + 2;
 
 		// Find new stop index
-		stop = rawData.find(READ_SEPERATOR, stop + 1) - 1;
+		stop = rawData.find(READ_SEPERATOR, stop + 2) - 1;
 
 		// Go to next vector element
 		crntIndex++;
 	} while (rawData.find(READ_SEPERATOR, stop - 1) != std::string::npos);
 
-	vectorizedData.at(crntIndex) = atoi(rawData.substr(start, (stopMeas - start)).c_str());
+	vectorizedData.push_back(atoi(rawData.substr(start, (stopMeas - start)).c_str()));
 	return vectorizedData;
 }
 
@@ -358,15 +358,15 @@ void DataAcq::DataAcquisition()
 				raw.locPort = mPortNumBuff[i];
 				if (mConfig.thumb.port == mPortNumBuff[i]) {
 					raw.locSerial = mConfig.thumb.serial;
-					raw.pressure = ReadPressureSingle(mConfig.thumb.index);
+					raw.pressure = ReadPressureSingle(mConfig.thumb.index) - mConfig.thumb.pressureOffset;
 				}
 				else if (mConfig.index.port == mPortNumBuff[i]) {
 					raw.locSerial = mConfig.index.serial;
-					raw.pressure = ReadPressureSingle(mConfig.index.index);
+					raw.pressure = ReadPressureSingle(mConfig.index.index) - mConfig.index.pressureOffset;
 				}
 				else if (mConfig.middle.port == mPortNumBuff[i]) {
 					raw.locSerial = mConfig.middle.serial;
-					raw.pressure = ReadPressureSingle(mConfig.middle.index);
+					raw.pressure = ReadPressureSingle(mConfig.middle.index) - mConfig.middle.pressureOffset;
 				}
 
 				// Correct point for reference sensor
