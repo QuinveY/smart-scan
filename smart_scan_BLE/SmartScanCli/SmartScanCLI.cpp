@@ -674,7 +674,6 @@ void Usage()
 	cout << "\t*full-export [id] [filename]\tExport the filtered data of the scan id as a CSV file with" << endl << "\t\t\t\t\tthe given filename (no spaces allowed in filename)." << endl << "\t\t\t\t\tIncludes: time, x, y, z, roll, elevation, azimuth, quality" << endl << "\t\t\t\t\t\t  and button state." << endl;
 	cout << "\t*export-raw [filename]\t\tExport the raw data of all the sensors as a CSV file with" << endl << "\t\t\t\t\tthe given filename (no spaces allowed in filename)." << endl << "\t\t\t\t\tIncludes: x, y, z." << endl;
 	cout << "\t*full-export-raw [filename]\tExport the raw data of all the sensors as a CSV file with" << endl << "\t\t\t\t\tthe given filename (no spaces allowed in filename)." << endl << "\t\t\t\t\tIncludes: time, x, y, z, roll, elevation, azimuth, quality " << endl << "\t\t\t\t\t\t  and button state." << endl;
-	cout << "\tble \t\t\t\tTest ble functionality." << endl;
 	cout << "\thelp \t\t\t\tPrint this screen again." << endl;
 	cout << "\texit \t\t\t\tCleanly exit the application." << endl;
 	cout << endl;
